@@ -2039,3 +2039,224 @@ dialog.modal .m-note { font-family: var(--sans); font-size: 14px; margin: 10px 0
 /* v19-3: niente spazio tra la frase e le definizioni a freccia */
 #w3#w3 .lp7 .ex > details.sx > summary .sx-do p:has(+ ul.arr.defs) { margin-bottom: 0 !important; }
 #w3 .lp7 .ex .sx-do .tip-in ul.chk li::before { border-width: 0 2px 2px 0; }
+
+/* v21-1: esercitazioni — cerchio come quelli delle unità, a sinistra della X, con il tratto della X */
+.lp7-nav { display: flex; align-items: center; gap: 16px; }
+.lp7 .lp7-nav .ex-code { all: unset; box-sizing: border-box; cursor: pointer; width: clamp(48px, 3.9vw, 58px); aspect-ratio: 1; border: 1.6px solid var(--ink); border-radius: 50%; display: grid; place-items: center; font-family: var(--sans); font-weight: 700; font-size: clamp(18px, 1.55vw, 22px); letter-spacing: -.02em; color: var(--ink); background: transparent; transition: background .2s, color .2s; }
+.lp7 .lp7-nav .ex-code:hover, .lp7 .lp7-nav .ex-code:focus-visible, html.exp-on .lp7 .lp7-nav .ex-code { background: var(--ink); color: #fff; }
+/* pannello nero sulla metà destra: stessa impaginazione del progetto, in negativo */
+.exp { position: fixed; top: 0; right: 0; bottom: 0; width: 50vw; z-index: 70; overflow-y: auto; overscroll-behavior: contain;
+  --bg: #111111; --fg: #FFFFFF; --ink: #FFFFFF; --rule: rgba(255,255,255,.38); --muted: #A1A1A1; --grey-t: #BABABA; --m1: #BABABA;
+  background: var(--bg); color: var(--fg); transform: translateX(100%); visibility: hidden; transition: transform .5s cubic-bezier(.2,.7,.2,1), visibility 0s .5s; }
+.exp.open { transform: none; visibility: visible; transition: transform .5s cubic-bezier(.2,.7,.2,1), visibility 0s; }
+.exp > .lp7 { padding: 0 20px 80px; background: transparent; color: var(--fg); }
+.exp .lp7-proj, .exp .lp-col, .exp .lp-inner { display: block; width: auto; max-width: none; height: auto; overflow: visible; position: static; background: transparent; }
+.exp .exp-x { all: unset; cursor: pointer; position: sticky; top: 0; float: right; width: 38px; height: 38px; margin: 18px 20px 0 0; color: #fff; z-index: 2; }
+.exp .exp-x svg { width: 100%; height: 100%; display: block; }
+.exp .lp-pill { border-color: #fff !important; color: #fff !important; background: transparent !important; }
+.exp .sym { background: #fff !important; }
+.exp-veil { position: fixed; top: 0; left: 0; bottom: 0; width: 50vw; z-index: 69; display: none; cursor: pointer; }
+html.exp-on .exp-veil { display: block; }
+@media (max-width: 860px) { .exp { width: 100vw; } .exp-veil { display: none !important; } }
+/* v21-6: il pill in alto, allineato alla X */
+.exp .exp-x { margin-top: 20px; }
+.exp > .lp7 { margin-top: -39.5px; }
+.exp { overflow-x: hidden; }
+.exp .lp-ph, .exp .lp-phhead, .exp .lp-top { margin-top: 0 !important; padding-top: 0 !important; }
+.exp .lp-phhead { padding-top: 20px !important; min-height: 0 !important; }
+/* richiesta su tutta la larghezza; In breve e Consegna sotto */
+.exp .lp7 .rq { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; }
+.exp .lp7 .rq > .shead { grid-column: 1 !important; grid-row: 1 !important; }
+.exp .lp7 .rq > .rq-text { grid-column: 1 !important; grid-row: 2 !important; }
+.exp .lp7 .rq > .rq-sum { grid-column: 1 !important; grid-row: 3 !important; margin-top: 18px !important; }
+.exp .lp7 .rq > .deliver { grid-column: 1 !important; grid-row: 4 !important; }
+.exp .rq-text p { max-width: none !important; }
+/* link al pdf dell'esercitazione */
+.exp .exp-pdf { display: inline-block; margin: 34px 0 0; color: #fff; font-family: var(--sans); font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+/* «Nessuna fase…» in Times */
+.lp7 .lp-first .l-d { font-family: "Times New Roman", Times, serif !important; font-size: 21px !important; line-height: 1.32 !important; letter-spacing: 0 !important; color: var(--fg) !important; }
+/* numerazione: progetto (W2)P1.1, (W3)P2.1 */
+#w2 .lp7 .ex > details.sx > summary h5::before { content: "(W2)P1." counter(exn); }
+#w3 .lp7 .ex > details.sx > summary h5::before { content: "(W3)P2." counter(exn); }
+/* Struttura: riga Esercitazioni, cerchio alto come i pill del progetto */
+.gantt .g-ex { all: unset; box-sizing: border-box; cursor: pointer; justify-self: start; align-self: center; width: 30.5px; height: 30.5px; border: 1px solid var(--fg); border-radius: 50%; display: grid; place-items: center; font-family: var(--sans); font-size: 11px; font-weight: 700; color: var(--fg); }
+.gantt .g-ex:hover, .gantt .g-ex:focus-visible { background: var(--fg); color: var(--bg); }
+/* v21: regole della W2 copiate per il pannello E1 */
+#e1 .lp7 .ba .ex { display: block !important; }
+#e1 .lp7 .ex > details.sub { grid-column: auto !important; margin: 0 !important; }
+#e1 .lp7 .p-body .ex .dd-body:has(> .st-do),
+#e1 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .dd-body { display: block !important; }
+#e1 .lp7 .ex .st-do { max-width: 832px !important; margin: 0 0 24px !important; }
+#e1 .lp7 .ex .st-do p, #e1 .lp7 .ex .st-do li { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; font-weight: 400 !important; letter-spacing: 0 !important; }
+#e1 .lp7 .ex > details.sub > summary h5::before { content: "2." counter(exn, decimal-leading-zero); }
+@media (min-width: 861px) {
+#e1 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .fl-ex li { grid-template-columns: 12em minmax(0, 1fr) !important; gap: 12px !important; }
+#e1 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .vm { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 32px !important; }
+#e1 .lp7 .ex .st-ex .fl-ex, #e1 .lp7 .ex .st-ex .vm, #e1 .lp7 .ex .st-ex > p.quote { max-width: 936px; }
+}
+#e1 .lp7 .ex .st-ex > small { display: block !important; margin: 0 0 8px !important; }
+#e1 .lp7 .ex > details.sx { padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--ink) !important; }
+#e1 .lp7 .ex > details.sx:last-of-type { border-bottom: 1px solid var(--ink) !important; }
+#e1 .lp7 .ex > details.sx > summary { display: grid !important; grid-template-columns: 370px minmax(0, 1fr); align-items: baseline; padding: 16px 0 !important; cursor: pointer !important; pointer-events: auto !important; list-style: none; border: 0 !important; }
+#e1 .lp7 .ex > details.sx > summary::-webkit-details-marker { display: none; }
+#e1 .lp7 .ex > details.sx > summary h5 { position: relative; display: grid !important; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; margin: 0 !important; }
+#e1 .lp7 .ex > details.sx > summary h5::before { display: block !important; font-size: clamp(22px, 2vw, 28px) !important; line-height: 1 !important; margin: 0 !important; transition: font-size .3s ease; }
+#e1 .lp7 .ex > details.sx > summary h5::after { content: ">"; position: absolute; left: 130px; margin-left: -1.1em; top: auto; bottom: 0; line-height: 1.2; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+#e1 .lp7 .ex > details.sx > summary:hover h5::after, #e1 .lp7 .ex > details.sx > summary:focus-visible h5::after { opacity: 1; transform: none; }
+#e1 .lp7 .ex .sx-k { margin: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em; color: var(--ink); }
+#e1 .lp7 .ex > details.sx.sx-open > summary { display: block !important; padding: 20px 0 0 !important; }
+#e1 .lp7 .ex > details.sx.sx-open > summary h5 { display: block !important; }
+#e1 .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: clamp(40px, 4.4vw, 64px) !important; line-height: .9 !important; margin: 0 0 10px !important; }
+#e1 .lp7 .ex > details.sx.sx-open > summary h5::after, #e1 .lp7 .ex > details.sx.sx-open .sx-k { display: none !important; }
+#e1 .lp7 .ex .sx-p { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+#e1 .lp7 .ex .sx-i { overflow: hidden; min-height: 0; }
+#e1 .lp7 .ex details.sx.sx-open .sx-p { grid-template-rows: 1fr; }
+#e1 .lp7 .ex details.sx:not(.sx-open) .sx-i { visibility: hidden; transition: visibility 0s .45s; }
+#e1 .lp7 .ex .sx-i > .dd-body { padding: 24px 0 40px !important; }
+@media (max-width: 860px) {
+#e1 .lp7 .ex > details.sx > summary { grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
+#e1 .lp7 .ex > details.sx > summary h5 { grid-template-columns: 72px minmax(0, 1fr); }
+#e1 .lp7 .ex > details.sx > summary h5::after { left: 72px; }
+#e1 .lp7 .ex .sx-k { padding-left: 72px; }
+}
+#e1 .lp7 .ex > details.sx { border-top-color: #C8C8C8 !important; }
+#e1 .lp7 .ex > details.sx:last-of-type { border-bottom-color: #C8C8C8 !important; }
+#e1 .lp7 .ex > details.sx > summary h5::after { content: none !important; }
+#e1 .lp7 .ex .sx-t { position: relative; }
+#e1 .lp7 .ex .sx-t::before { content: ">"; position: absolute; right: 100%; margin-right: .5em; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+#e1 .lp7 .ex > details.sx > summary:hover .sx-t::before, #e1 .lp7 .ex > details.sx > summary:focus-visible .sx-t::before { opacity: 1; transform: none; }
+#e1 .lp7 .ex > details.sx.sx-open .sx-t::before { display: none; }
+#e1 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 130px 280px minmax(0, 1fr); column-gap: 0; align-items: baseline; }
+#e1 .lp7 .ex > details.sx:not(.sx-open) > summary h5 { display: contents !important; }
+#e1 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { grid-column: 1; grid-row: 1; }
+#e1 .lp7 .ex > details.sx:not(.sx-open) .sx-t { grid-column: 2; grid-row: 1; padding-right: 16px; }
+#e1 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 3; grid-row: 1; }
+@media (max-width: 860px) {
+#e1 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 72px minmax(0, 1fr); row-gap: 6px; }
+#e1 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
+}
+#e1 .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
+:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
+@media (max-width: 860px) {
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
+:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
+}
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .st-ex > small { display: none !important; }
+@media (min-width: 861px) {
+:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
+}
+:is(#e1, #w3) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
+@media (min-width: 861px) {
+:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
+}
+:is(#e1, #w3) .lp7 .ex details.sx .tw table, :is(#e1, #w3) .lp7 .ex details.sx .tw td, :is(#e1, #w3) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#e1, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+#e1 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
+#e1 .lp7 .ex .tw td { vertical-align: top; }
+#e1 .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+#e1 .lp7 .ex .tw.scan td.scan-l a:hover { text-decoration-thickness: 2px; }
+#e1 .lp7 .ex .tw.scan td:first-child { width: 34%; }
+#e1 .lp7 .ex .tw.scan td strong { font-weight: 700; }
+#e1 .lp7 .ex .tw.scan td:first-child { width: auto; }
+#e1 .lp7 .ex .tw.c1 td:first-child, #e1 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 0 !important; }
+#e1 .lp7 .ex .tw.c1 td:first-child, #e1 .lp7 .ex .tw.c2 td:nth-child(-n+2) { padding-top: 11px !important; }
+#e1 .lp7 .ex details.sx .tw td { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+#e1 .lp7 .ex .tw.c1 td:first-child, #e1 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; padding-top: 9px !important; }
+@media (min-width: 861px) {
+#e1 .lp7 .ex .tw.c1 table, #e1 .lp7 .ex .tw.c2 table { table-layout: fixed; width: 100%; }
+#e1 .lp7 .ex .tw.c1 :is(td, th) { box-sizing: border-box; }
+#e1 .lp7 .ex .tw.c2 :is(td, th) { box-sizing: border-box; }
+#e1 .lp7 .ex .tw.c1 tr > :first-child { width: 410px; }
+#e1 .lp7 .ex .tw.c2 tr > :nth-child(1) { width: 150px; }
+#e1 .lp7 .ex .tw.c2 tr > :nth-child(2) { width: 260px; padding-right: 24px; }
+}
+#e1 .lp7 .ex .tw.c1 td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: clamp(14px, 1.15vw, 16px) !important; line-height: 1.24 !important; letter-spacing: 0 !important; padding-right: 24px !important; }
+#e1 .lp7 .ex .tw.c1 td:first-child .k { display: block; font-weight: 700; }
+#e1 .lp7 .ex .tw.c1 td:first-child .d { display: block; font-weight: 400; }
+#e1 .lp7 .ex .tw.terr td:nth-child(2), #e1 .lp7 .ex .tw.terr th:nth-child(2) { padding-right: 24px !important; }
+@media (max-width: 860px) {
+#e1 .lp7 .ex .tw.terr :is(table, tbody) { display: block; width: 100% !important; min-width: 0 !important; }
+#e1 .lp7 .ex .tw.terr tr:first-child { display: none; }
+#e1 .lp7 .ex .tw.terr tr { display: block; border-top: 1px solid #C8C8C8; padding: 10px 0 12px; }
+#e1 .lp7 .ex .tw.terr td { display: block; width: auto !important; white-space: normal !important; border: 0 !important; padding: 0 0 6px !important; }
+#e1 .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene: '; font-family: var(--sans); font-weight: 700; }
+}
+#e1 .lp7 .ex > details.sx > summary h5::before { content: "(W2)1." counter(exn); }
+:is(#e1, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+@media (max-width: 860px) {
+:is(#e1, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
+}
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
+#e1 .lp7 .ex > details.sx > summary h5::before { content: "(E1)" counter(exn); }
+#e1 .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: none; }
+#e1 .lp7 .ex > details.sx > summary h5::before { content: "(W1)E1." counter(exn); }
+#e1#e1 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 25px !important; }
+#e1#e1 .lp7 .ex > details.sx > summary { grid-template-columns: 22% 28% 50% !important; column-gap: 0 !important; }
+#e1#e1 .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: 50% 50% !important; column-gap: 0 !important; }
+#e1#e1 .lp7 .ex > details.sx:last-of-type, #e1#e1 .lp7 .ex > details.sx:last-of-type > summary, #e1#e1 .lp7 .ex > details.sx:last-of-type .sx-p { border-bottom: 0 !important; }
+
+/* v21-11: In breve e Consegna su due colonne nel pannello, staccate dal testo; consegna come i testi di In breve */
+.exp .lp7 .rq { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; column-gap: 32px !important; }
+.exp .lp7 .rq > .shead, .exp .lp7 .rq > .rq-text { grid-column: 1 / -1 !important; }
+.exp .lp7 .rq > .rq-sum { align-self: start !important; grid-column: 1 !important; grid-row: 3 !important; margin-top: 56px !important; }
+.exp .lp7 .rq > .deliver { align-self: start !important; grid-column: 2 !important; grid-row: 3 !important; margin-top: 56px !important; padding-top: 4px !important; font-family: var(--slab) !important; font-size: 14px !important; line-height: 1.45 !important; letter-spacing: 0 !important; }
+.exp .lp7 .rq > .deliver b { display: block; font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 11.5px; }
+.exp .lp7 .rq > .deliver br { display: none; }
+/* v21-16: schede della brand voice, note piccole (spillo) in bastoni */
+#w2#w2#w2 .card.bv .sino > span { font-family: var(--sans) !important; letter-spacing: 0 !important; font-size: 13px !important; line-height: 1.35 !important; }
+/* v21-13: numerazione con un piccolo spazio dopo la P (e dopo la E); niente filo sotto l'ultima voce */
+#w2 .lp7 .ex > details.sx > summary h5::before { content: "(W2)P\2006 1." counter(exn); }
+#w3 .lp7 .ex > details.sx > summary h5::before { content: "(W3)P\2006 2." counter(exn); }
+:is(#w2, #w3)#w2#w2 .lp7 .ex > details.sx:last-of-type, :is(#w2, #w3) .lp7 .ex > details.sx:last-of-type > summary { border-bottom: 0 !important; }
+#w2#w2 .lp7 .ex > details.sx:last-of-type, #w3#w3 .lp7 .ex > details.sx:last-of-type { border-bottom: 0 !important; }
+/* v21-14: ricevimenti — schede dei trimestri con frecce, una scheda per data */
+.rv-bar { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--rule); padding-bottom: 10px; margin-top: 26px; }
+.rc-tabs { display: flex; gap: 34px; flex-wrap: wrap; }
+.rc-tab { all: unset; cursor: pointer; opacity: .32; transition: opacity .2s; }
+.rc-tab:hover, .rc-tab.on { opacity: 1; }
+.rc-tab h2 { margin: 0; display: flex; align-items: center; gap: 12px; font-size: 26px; letter-spacing: -.03em; }
+.rv-page .rc-tab .rc-h { font-size: 13px !important; font-weight: 600 !important; letter-spacing: 0 !important; border: 1px solid var(--ink) !important; border-radius: 999px !important; padding: 3px 10px !important; background: transparent !important; color: var(--ink) !important; }
+.rv-page .rc-tab .rc-h b { font-weight: 600 !important; color: inherit !important; }
+.rv-arr { display: flex; gap: 8px; }
+.rv-arr button { all: unset; cursor: pointer; width: 38px; height: 38px; border: 1.6px solid var(--ink); border-radius: 50%; display: grid; place-items: center; transition: background .2s, color .2s; }
+.rv-arr button svg { width: 100%; height: 100%; display: block; }
+.rv-arr.off { visibility: hidden; }
+.rv-bar { min-height: 52px; align-items: center !important; }
+.rv-lead { margin-top: clamp(28px, 3vw, 40px); max-width: calc(50% - 24px); }
+.rv-lead p { font-family: "Times New Roman", Times, serif; font-weight: 400; font-size: clamp(24px, 2.5vw, 34px); line-height: 1.04; letter-spacing: -.012em; margin: 0; }
+@media (max-width: 860px) { .rv-lead { max-width: none; } }
+.rv-arr button:hover { background: var(--ink); color: #fff; }
+.rv-pane { display: none; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.rv-pane.on { display: grid; }
+.rv { padding: 16px 18px 26px 0; border-right: 1px solid var(--rule); margin-right: 18px; }
+.rv.rv-hide { display: none; }
+.rv.rv-last { border-right: 0; margin-right: 0; }
+.rv-l { display: block; font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.rv-d { font-family: var(--sans); font-weight: 400 !important; font-size: clamp(44px, 4vw, 60px); letter-spacing: -.045em; line-height: 1; margin: 8px 0 10px; }
+.rv-t { display: block; font-family: var(--slab); font-weight: 400 !important; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+.rv-page { margin-top: 64px !important; }
+.rv-count { font-family: var(--slab); font-size: 13px; color: var(--muted); align-self: center; margin-right: 6px; white-space: nowrap; }
+.rv-arr button:disabled { opacity: .25; cursor: default; background: transparent; color: var(--ink); }
+.rv-bs { display: flex; gap: 8px; flex-wrap: wrap; }
+.rv-b { display: inline-flex; align-items: center; border: 1px solid var(--ink); border-radius: 999px; padding: 6px 13px; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--ink); text-decoration: none; white-space: nowrap; transition: background .2s, color .2s; }
+.rv-b:hover, .rv.rv-now .rv-mail { background: var(--ink); color: #fff; }
+.rv.past { opacity: .3; }
+.rv.past .rv-b { pointer-events: none; }
+@media (max-width: 860px) { .rv-pane { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
