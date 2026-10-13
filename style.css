@@ -2555,3 +2555,45 @@ html.exp-on .exp-veil { display: block; }
 #w1#w1 .lp7 .p0-rosa .rosa .tw tr:first-child td { padding-top: 0 !important; }
 #w1#w1 .lp7 .rosa .tw td:first-child b.k { display: inline !important; }
 #w1#w1 .lp7 .rosa .tw td:first-child .rn { display: inline !important; font-weight: 400 !important; color: var(--muted) !important; font-family: var(--sans) !important; font-size: 16px !important; }
+
+/* v22-7: sempre chiaro */
+html { color-scheme: light; }
+.syl-tog i { display: none; }
+@media (max-width: 860px) {
+  /* data in alto nascosta */
+  .navbar .when { display: none !important; }
+  /* testata più compatta */
+  .hero h1.mast { row-gap: .75em !important; line-height: 1.3 !important; }
+  .hero h1.mast .m-tri { margin-bottom: .2em !important; }
+  .hero h1.mast .m-tri span:nth-child(odd) { margin-top: .25em !important; }
+  /* testo introduttivo del Programma un po' più piccolo */
+  .lead8 p { font-size: 21px !important; line-height: 1.08 !important; }
+  /* Le lezioni / Le esercitazioni / Il progetto: filetti a metà tra i blocchi */
+  .three > div { padding-bottom: 22px !important; }
+  .three > div + div { padding-top: 22px !important; }
+  /* unità in ordine 1–4 */
+  .syl-s:has(.syl-un) { display: flex !important; flex-direction: column; }
+  .syl-s:has(.syl-un) > .syl-c2, .syl-s:has(.syl-un) > .syl-c3 { display: contents !important; }
+  .syl-un { order: var(--o); margin-bottom: 26px; }
+  .syl-s:has(.syl-un) > h3, .syl-s:has(.syl-un) > .syl-c1 { order: 0; }
+  /* «Gli studenti» e «Verranno valutati» chiusi, con il + */
+  .syl-tog { cursor: pointer; display: flex !important; align-items: center; gap: 10px; color: var(--ink) !important; }
+  .syl-tog i { display: inline-block; position: relative; width: 12px; height: 12px; }
+  .syl-tog i::before, .syl-tog i::after { content: ""; position: absolute; left: 0; right: 0; top: 5.5px; height: 1.5px; background: var(--ink); transition: transform .25s; }
+  .syl-tog i::after { transform: rotate(90deg); }
+  .syl-s:not(.syl-shut) .syl-tog i::after { transform: rotate(0deg); }
+  .syl-s.syl-shut .syl-obj { display: none !important; }
+  .syl-s .syl-c3 > .syl-sub[aria-hidden="true"] { display: none !important; }
+  /* elenco lezioni: niente sottotitolo delle fasi */
+  .lez7 > li > a .lf, .lp7-head .lf { display: none !important; }
+  /* testata della lezione: PDF sotto il titolo, cerchio dell'esercitazione più piccolo */
+  .lp7-head .lt { padding-right: 96px; }
+  .lp7-head .lt .lx-pdf { display: flex !important; width: max-content; margin: 12px 0 0 !important; }
+  .lp7 .lp7-nav .ex-code { width: 38px !important; font-size: 15px !important; }
+  /* esempio e voci: margini come nel resto del sito, niente sottotitolo */
+  .lp7 details.ex-dd { margin-left: 0 !important; margin-right: 0 !important; }
+  .lp7 details.ex-dd > summary .ex-k { display: none !important; }
+  /* voce aperta: numero e titolo della stessa grandezza */
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: 26px !important; line-height: 1 !important; margin: 0 0 6px !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary .sx-t { font-size: 26px !important; line-height: 1.05 !important; }
+}
