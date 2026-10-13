@@ -2616,12 +2616,10 @@ html { color-scheme: light; }
   html body #w1#w1 .lp7 .p0-rosa .tw tr { border-top: 1px solid #C8C8C8 !important; padding: 12px 0 14px !important; }
   html body #w1#w1 .lp7 .p0-rosa .tw tr:first-child { border-top: 0 !important; padding-top: 0 !important; }
   html body #w1#w1 .lp7 .p0-rosa .tw td:first-child { margin-bottom: 4px; }
-  /* voci: niente frase di spiegazione; numero e titolo della stessa grandezza, chiuse e aperte */
+  /* voci: niente frase di spiegazione (v22-9: corpi di nuovo come in v22-7) */
   html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary .sx-k { display: none !important; }
   html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary { grid-template-columns: max-content minmax(0, 1fr) !important; column-gap: 14px !important; }
   html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: minmax(0, 1fr) !important; }
-  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary h5::before, html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: 22px !important; line-height: 1.05 !important; }
-  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary .sx-t, html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary .sx-t { font-size: 22px !important; line-height: 1.05 !important; padding-right: 0 !important; }
   /* pannelli delle esercitazioni: niente sottotitolo «Fase per fase» */
   .exp .lp7 details.ex-dd > summary .ex-k { display: none !important; }
   /* territorio culturale: ambito e «Da dove viene» stessa grandezza, ognuno sulla sua riga, blocchi più staccati */
@@ -2629,4 +2627,9 @@ html { color-scheme: light; }
   html body #w2#w2 .lp7 .ex .tw.terr td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: 16px !important; line-height: 1.25 !important; padding-bottom: 4px !important; }
   html body #w2#w2 .lp7 .ex .tw.terr td:nth-child(2) { padding-bottom: 14px !important; }
   html body #w2#w2 .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene' !important; display: block; font-size: 16px; line-height: 1.25; margin-bottom: 4px; }
+}
+
+/* v22-9: sul telefono niente freccia «>» delle voci (al tocco restava accesa come se il dito fosse sopra) */
+@media (max-width: 860px), (hover: none) {
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex .sx-t::before { display: none !important; }
 }
