@@ -2597,3 +2597,36 @@ html { color-scheme: light; }
   html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: 26px !important; line-height: 1 !important; margin: 0 0 6px !important; }
   html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary .sx-t { font-size: 26px !important; line-height: 1.05 !important; }
 }
+
+/* v22-8: altri ritocchi per il telefono */
+@media (max-width: 860px) {
+  /* Times grande: interlinea appena più ampia */
+  .lead8 p { line-height: 1.13 !important; }
+  .syl-big, .lp7 .rq-text p { line-height: 1.1 !important; }
+  /* testata: due blocchi con la stessa interlinea delle righe dell'Accademia */
+  .hero h1.mast .m-tri { display: block !important; margin: 0 !important; }
+  .hero h1.mast .m-tri span { display: block !important; margin: 0 !important; }
+  /* filetti a metà tra il testo sopra e il titolo sotto */
+  html body section.three > div { padding-bottom: 22px !important; }
+  html body section.three > div:not(:first-child) { padding-top: 25px !important; }
+  /* rosa dei brand senza scorrimento orizzontale */
+  html body #w1#w1 .lp7 .p0-rosa .tw { overflow: visible !important; }
+  html body #w1#w1 .lp7 .p0-rosa .tw :is(table, tbody, tr) { display: block !important; width: 100% !important; min-width: 0 !important; }
+  html body #w1#w1 .lp7 .p0-rosa .tw td { display: block !important; width: auto !important; min-width: 0 !important; white-space: normal !important; padding: 0 !important; border: 0 !important; }
+  html body #w1#w1 .lp7 .p0-rosa .tw tr { border-top: 1px solid #C8C8C8 !important; padding: 12px 0 14px !important; }
+  html body #w1#w1 .lp7 .p0-rosa .tw tr:first-child { border-top: 0 !important; padding-top: 0 !important; }
+  html body #w1#w1 .lp7 .p0-rosa .tw td:first-child { margin-bottom: 4px; }
+  /* voci: niente frase di spiegazione; numero e titolo della stessa grandezza, chiuse e aperte */
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary .sx-k { display: none !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary { grid-template-columns: max-content minmax(0, 1fr) !important; column-gap: 14px !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: minmax(0, 1fr) !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary h5::before, html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: 22px !important; line-height: 1.05 !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary .sx-t, html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary .sx-t { font-size: 22px !important; line-height: 1.05 !important; padding-right: 0 !important; }
+  /* pannelli delle esercitazioni: niente sottotitolo «Fase per fase» */
+  .exp .lp7 details.ex-dd > summary .ex-k { display: none !important; }
+  /* territorio culturale: ambito e «Da dove viene» stessa grandezza, ognuno sulla sua riga, blocchi più staccati */
+  html body #w2#w2 .lp7 .ex .tw.terr tr { padding: 14px 0 18px !important; }
+  html body #w2#w2 .lp7 .ex .tw.terr td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: 16px !important; line-height: 1.25 !important; padding-bottom: 4px !important; }
+  html body #w2#w2 .lp7 .ex .tw.terr td:nth-child(2) { padding-bottom: 14px !important; }
+  html body #w2#w2 .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene' !important; display: block; font-size: 16px; line-height: 1.25; margin-bottom: 4px; }
+}
