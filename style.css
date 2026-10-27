@@ -1728,135 +1728,226 @@ h4.ex-logo img { height: 1.15em; width: auto; display: block; }
 /* ===== v15: regole v14 della W2 applicate alla W3 ===== */
 /* ===== v14 ===== */
 /* W2 esempio IKEA: fasi chiuse a righe (numero · titolo · testo breve), si aprono come le W */
-#w3 .lp7 .ex > details.sx { padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--ink) !important; }
-#w3 .lp7 .ex > details.sx:last-of-type { border-bottom: 1px solid var(--ink) !important; }
-#w3 .lp7 .ex > details.sx > summary { display: grid !important; grid-template-columns: 370px minmax(0, 1fr); align-items: baseline; padding: 16px 0 !important; cursor: pointer !important; pointer-events: auto !important; list-style: none; border: 0 !important; }
-#w3 .lp7 .ex > details.sx > summary::-webkit-details-marker { display: none; }
-#w3 .lp7 .ex > details.sx > summary h5 { position: relative; display: grid !important; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; margin: 0 !important; }
-#w3 .lp7 .ex > details.sx > summary h5::before { display: block !important; font-size: clamp(22px, 2vw, 28px) !important; line-height: 1 !important; margin: 0 !important; transition: font-size .3s ease; }
-#w3 .lp7 .ex > details.sx > summary h5::after { content: ">"; position: absolute; left: 130px; margin-left: -1.1em; top: auto; bottom: 0; line-height: 1.2; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
-#w3 .lp7 .ex > details.sx > summary:hover h5::after, #w3 .lp7 .ex > details.sx > summary:focus-visible h5::after { opacity: 1; transform: none; }
-#w3 .lp7 .ex .sx-k { margin: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em; color: var(--ink); }
+#w3 .lp7 .ex > details.sx ,
+#w4 .lp7 .ex > details.sx { padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--ink) !important; }
+#w3 .lp7 .ex > details.sx:last-of-type ,
+#w4 .lp7 .ex > details.sx:last-of-type { border-bottom: 1px solid var(--ink) !important; }
+#w3 .lp7 .ex > details.sx > summary ,
+#w4 .lp7 .ex > details.sx > summary { display: grid !important; grid-template-columns: 370px minmax(0, 1fr); align-items: baseline; padding: 16px 0 !important; cursor: pointer !important; pointer-events: auto !important; list-style: none; border: 0 !important; }
+#w3 .lp7 .ex > details.sx > summary::-webkit-details-marker ,
+#w4 .lp7 .ex > details.sx > summary::-webkit-details-marker { display: none; }
+#w3 .lp7 .ex > details.sx > summary h5 ,
+#w4 .lp7 .ex > details.sx > summary h5 { position: relative; display: grid !important; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; margin: 0 !important; }
+#w3 .lp7 .ex > details.sx > summary h5::before ,
+#w4 .lp7 .ex > details.sx > summary h5::before { display: block !important; font-size: clamp(22px, 2vw, 28px) !important; line-height: 1 !important; margin: 0 !important; transition: font-size .3s ease; }
+#w3 .lp7 .ex > details.sx > summary h5::after ,
+#w4 .lp7 .ex > details.sx > summary h5::after { content: ">"; position: absolute; left: 130px; margin-left: -1.1em; top: auto; bottom: 0; line-height: 1.2; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+#w3 .lp7 .ex > details.sx > summary:hover h5::after, #w3 .lp7 .ex > details.sx > summary:focus-visible h5::after ,
+#w4 .lp7 .ex > details.sx > summary:hover h5::after, #w4 .lp7 .ex > details.sx > summary:focus-visible h5::after { opacity: 1; transform: none; }
+#w3 .lp7 .ex .sx-k ,
+#w4 .lp7 .ex .sx-k { margin: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em; color: var(--ink); }
 /* aperta: numero grande sopra, titolo sotto, testo breve nascosto */
-#w3 .lp7 .ex > details.sx.sx-open > summary { display: block !important; padding: 20px 0 0 !important; }
-#w3 .lp7 .ex > details.sx.sx-open > summary h5 { display: block !important; }
-#w3 .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: clamp(40px, 4.4vw, 64px) !important; line-height: .9 !important; margin: 0 0 10px !important; }
-#w3 .lp7 .ex > details.sx.sx-open > summary h5::after, #w3 .lp7 .ex > details.sx.sx-open .sx-k { display: none !important; }
+#w3 .lp7 .ex > details.sx.sx-open > summary ,
+#w4 .lp7 .ex > details.sx.sx-open > summary { display: block !important; padding: 20px 0 0 !important; }
+#w3 .lp7 .ex > details.sx.sx-open > summary h5 ,
+#w4 .lp7 .ex > details.sx.sx-open > summary h5 { display: block !important; }
+#w3 .lp7 .ex > details.sx.sx-open > summary h5::before ,
+#w4 .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: clamp(40px, 4.4vw, 64px) !important; line-height: .9 !important; margin: 0 0 10px !important; }
+#w3 .lp7 .ex > details.sx.sx-open > summary h5::after, #w3 .lp7 .ex > details.sx.sx-open .sx-k ,
+#w4 .lp7 .ex > details.sx.sx-open > summary h5::after, #w4 .lp7 .ex > details.sx.sx-open .sx-k { display: none !important; }
 /* apertura animata, come il pannello delle lezioni */
-#w3 .lp7 .ex .sx-p { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
-#w3 .lp7 .ex .sx-i { overflow: hidden; min-height: 0; }
-#w3 .lp7 .ex details.sx.sx-open .sx-p { grid-template-rows: 1fr; }
-#w3 .lp7 .ex details.sx:not(.sx-open) .sx-i { visibility: hidden; transition: visibility 0s .45s; }
-#w3 .lp7 .ex .sx-i > .dd-body { padding: 24px 0 40px !important; }
+#w3 .lp7 .ex .sx-p ,
+#w4 .lp7 .ex .sx-p { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+#w3 .lp7 .ex .sx-i ,
+#w4 .lp7 .ex .sx-i { overflow: hidden; min-height: 0; }
+#w3 .lp7 .ex details.sx.sx-open .sx-p ,
+#w4 .lp7 .ex details.sx.sx-open .sx-p { grid-template-rows: 1fr; }
+#w3 .lp7 .ex details.sx:not(.sx-open) .sx-i ,
+#w4 .lp7 .ex details.sx:not(.sx-open) .sx-i { visibility: hidden; transition: visibility 0s .45s; }
+#w3 .lp7 .ex .sx-i > .dd-body ,
+#w4 .lp7 .ex .sx-i > .dd-body { padding: 24px 0 40px !important; }
 @media (max-width: 860px) {
-  #w3 .lp7 .ex > details.sx > summary { grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
-  #w3 .lp7 .ex > details.sx > summary h5 { grid-template-columns: 72px minmax(0, 1fr); }
-  #w3 .lp7 .ex > details.sx > summary h5::after { left: 72px; }
-  #w3 .lp7 .ex .sx-k { padding-left: 72px; }
+  #w3 .lp7 .ex > details.sx > summary ,
+  #w4 .lp7 .ex > details.sx > summary { grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
+  #w3 .lp7 .ex > details.sx > summary h5 ,
+  #w4 .lp7 .ex > details.sx > summary h5 { grid-template-columns: 72px minmax(0, 1fr); }
+  #w3 .lp7 .ex > details.sx > summary h5::after ,
+  #w4 .lp7 .ex > details.sx > summary h5::after { left: 72px; }
+  #w3 .lp7 .ex .sx-k ,
+  #w4 .lp7 .ex .sx-k { padding-left: 72px; }
 }
 /* v14-2: numero · titolo · testo sulla stessa linea di base (una sola griglia); filetti come tra le W; freccia sul titolo */
-#w3 .lp7 .ex > details.sx { border-top-color: #C8C8C8 !important; }
-#w3 .lp7 .ex > details.sx:last-of-type { border-bottom-color: #C8C8C8 !important; }
-#w3 .lp7 .ex > details.sx > summary h5::after { content: none !important; }
-#w3 .lp7 .ex .sx-t { position: relative; }
-#w3 .lp7 .ex .sx-t::before { content: ">"; position: absolute; right: 100%; margin-right: .5em; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
-#w3 .lp7 .ex > details.sx > summary:hover .sx-t::before, #w3 .lp7 .ex > details.sx > summary:focus-visible .sx-t::before { opacity: 1; transform: none; }
-#w3 .lp7 .ex > details.sx.sx-open .sx-t::before { display: none; }
-#w3 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 130px 280px minmax(0, 1fr); column-gap: 0; align-items: baseline; }
-#w3 .lp7 .ex > details.sx:not(.sx-open) > summary h5 { display: contents !important; }
-#w3 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { grid-column: 1; grid-row: 1; }
-#w3 .lp7 .ex > details.sx:not(.sx-open) .sx-t { grid-column: 2; grid-row: 1; padding-right: 16px; }
-#w3 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 3; grid-row: 1; }
+#w3 .lp7 .ex > details.sx ,
+#w4 .lp7 .ex > details.sx { border-top-color: #C8C8C8 !important; }
+#w3 .lp7 .ex > details.sx:last-of-type ,
+#w4 .lp7 .ex > details.sx:last-of-type { border-bottom-color: #C8C8C8 !important; }
+#w3 .lp7 .ex > details.sx > summary h5::after ,
+#w4 .lp7 .ex > details.sx > summary h5::after { content: none !important; }
+#w3 .lp7 .ex .sx-t ,
+#w4 .lp7 .ex .sx-t { position: relative; }
+#w3 .lp7 .ex .sx-t::before ,
+#w4 .lp7 .ex .sx-t::before { content: ">"; position: absolute; right: 100%; margin-right: .5em; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+#w3 .lp7 .ex > details.sx > summary:hover .sx-t::before, #w3 .lp7 .ex > details.sx > summary:focus-visible .sx-t::before ,
+#w4 .lp7 .ex > details.sx > summary:hover .sx-t::before, #w4 .lp7 .ex > details.sx > summary:focus-visible .sx-t::before { opacity: 1; transform: none; }
+#w3 .lp7 .ex > details.sx.sx-open .sx-t::before ,
+#w4 .lp7 .ex > details.sx.sx-open .sx-t::before { display: none; }
+#w3 .lp7 .ex > details.sx:not(.sx-open) > summary ,
+#w4 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 130px 280px minmax(0, 1fr); column-gap: 0; align-items: baseline; }
+#w3 .lp7 .ex > details.sx:not(.sx-open) > summary h5 ,
+#w4 .lp7 .ex > details.sx:not(.sx-open) > summary h5 { display: contents !important; }
+#w3 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before ,
+#w4 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { grid-column: 1; grid-row: 1; }
+#w3 .lp7 .ex > details.sx:not(.sx-open) .sx-t ,
+#w4 .lp7 .ex > details.sx:not(.sx-open) .sx-t { grid-column: 2; grid-row: 1; padding-right: 16px; }
+#w3 .lp7 .ex > details.sx:not(.sx-open) .sx-k ,
+#w4 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 3; grid-row: 1; }
 @media (max-width: 860px) {
-  #w3 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 72px minmax(0, 1fr); row-gap: 6px; }
-  #w3 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
+  #w3 .lp7 .ex > details.sx:not(.sx-open) > summary ,
+  #w4 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 72px minmax(0, 1fr); row-gap: 6px; }
+  #w3 .lp7 .ex > details.sx:not(.sx-open) .sx-k ,
+  #w4 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
 }
 /* v14-3: righe delle fasi un po' più basse */
-#w3 .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
+#w3 .lp7 .ex > details.sx:not(.sx-open) > summary ,
+#w4 .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
 
 
 /* ===== v15 ===== */
 /* W3 esempio IKEA: stesse regole della W2 (v13) — consegna in mono, etichetta "Esempio IKEA", numeri 3.01–3.11 continui sulle due fasi */
-#w3 .lp7 .ex > details.sub { grid-column: auto !important; margin: 0 !important; }
-#w3 .lp7 { counter-reset: exn; }
-#w3 .lp7 .ex { counter-reset: none; }
-#w3 .lp7 .ex > details.sub > summary h5::before { content: "3." counter(exn, decimal-leading-zero); }
-#w3 .lp7 .ex .st-ex > small { display: block !important; margin: 0 0 8px !important; font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+#w3 .lp7 .ex > details.sub ,
+#w4 .lp7 .ex > details.sub { grid-column: auto !important; margin: 0 !important; }
+#w3 .lp7 ,
+#w4 .lp7 { counter-reset: exn; }
+#w3 .lp7 .ex ,
+#w4 .lp7 .ex { counter-reset: none; }
+#w3 .lp7 .ex > details.sub > summary h5::before ,
+#w4 .lp7 .ex > details.sub > summary h5::before { content: "3." counter(exn, decimal-leading-zero); }
+#w3 .lp7 .ex .st-ex > small ,
+#w4 .lp7 .ex .st-ex > small { display: block !important; margin: 0 0 8px !important; font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
 /* esempio in bastoni come nella W2 (la consegna resta in mono) */
-#w3 .lp7 .ex .st-ex > p:not(.quote), #w3 .lp7 .ex .st-ex > ul li { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.32 !important; letter-spacing: 0 !important; }
-#w3 .lp7 .ex .st-ex > p, #w3 .lp7 .ex .st-ex > ul { margin: 0 0 .8em !important; }
-#w3 .lp7 .ex .st-ex > p.quote, #w3 .lp7 .ex .st-ex > p, #w3 .lp7 .ex .st-ex > ul { max-width: 936px; }
-#w3 .lp7 .ex .st-do p { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; font-weight: 400 !important; letter-spacing: 0 !important; }
+#w3 .lp7 .ex .st-ex > p:not(.quote), #w3 .lp7 .ex .st-ex > ul li ,
+#w4 .lp7 .ex .st-ex > p:not(.quote), #w4 .lp7 .ex .st-ex > ul li { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.32 !important; letter-spacing: 0 !important; }
+#w3 .lp7 .ex .st-ex > p, #w3 .lp7 .ex .st-ex > ul ,
+#w4 .lp7 .ex .st-ex > p, #w4 .lp7 .ex .st-ex > ul { margin: 0 0 .8em !important; }
+#w3 .lp7 .ex .st-ex > p.quote, #w3 .lp7 .ex .st-ex > p, #w3 .lp7 .ex .st-ex > ul ,
+#w4 .lp7 .ex .st-ex > p.quote, #w4 .lp7 .ex .st-ex > p, #w4 .lp7 .ex .st-ex > ul { max-width: 936px; }
+#w3 .lp7 .ex .st-do p ,
+#w4 .lp7 .ex .st-do p { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; font-weight: 400 !important; letter-spacing: 0 !important; }
 
 /* W2 e W3: la consegna sta nel summary, nascosta da chiusa; da aperta va di fianco al numero, allineata alla colonna dei testi brevi (130 + 280 = 410px) */
-:is(#w2, #w3) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
-:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
-:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
-:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
-:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
-:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
-:is(#w2, #w3) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx > summary .sx-do ,
+:is(#w2, #w4) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary h5 ,
+:is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do ,
+:is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p ,
+:is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child ,
+:is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
+:is(#w2, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#w2, #w4) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
 @keyframes sxdo { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 860px) {
-  :is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
-  :is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
-  :is(#w2, #w3) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
+  :is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+  :is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
+  :is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do ,
+  :is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
+  :is(#w2, #w3) .lp7 .ex .sx-i > .dd-body ,
+  :is(#w2, #w4) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
 }
 /* v15-3: spazio tra la tabella del framing e la frase-missione */
-#w3 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
+#w3 .lp7 .ex .st-ex > .tw ,
+#w4 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
 /* v15-4: voce aperta, numero e consegna un po più vicini al filo sopra */
-:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
 /* v15-5: Scan Plan — tabelle con link, titoletti delle sezioni */
-#w3 .lp7 .ex .tw td { vertical-align: top; }
-#w3 .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
-#w3 .lp7 .ex .tw.scan td.scan-l a:hover { text-decoration-thickness: 2px; }
-#w3 .lp7 .ex .st-ex > p:has(> strong:first-child) { margin-top: 8px !important; }
+#w3 .lp7 .ex .tw td ,
+#w4 .lp7 .ex .tw td { vertical-align: top; }
+#w3 .lp7 .ex .tw.scan td.scan-l a ,
+#w4 .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+#w3 .lp7 .ex .tw.scan td.scan-l a:hover ,
+#w4 .lp7 .ex .tw.scan td.scan-l a:hover { text-decoration-thickness: 2px; }
+#w3 .lp7 .ex .st-ex > p:has(> strong:first-child) ,
+#w4 .lp7 .ex .st-ex > p:has(> strong:first-child) { margin-top: 8px !important; }
 /* v15-6: voce aperta — tutto il contenuto parte dalla colonna della consegna (la prima colonna resta vuota); niente etichetta "Esempio IKEA"; filetti interni delle tabelle grigi */
-:is(#w2, #w3) .lp7 .ex details.sx .st-ex > small { display: none !important; }
+:is(#w2, #w3) .lp7 .ex details.sx .st-ex > small ,
+:is(#w2, #w4) .lp7 .ex details.sx .st-ex > small { display: none !important; }
 @media (min-width: 861px) {
-  :is(#w2, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
+  :is(#w2, #w3) .lp7 .ex .sx-i > .dd-body ,
+  :is(#w2, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
 }
-:is(#w2, #w3) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
-:is(#w2, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#w2, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
-#w3 .lp7 .ex .tw.scan td:first-child { width: 34%; }
-#w3 .lp7 .ex .tw.scan td strong { font-weight: 700; }
+:is(#w2, #w3) .lp7 .ex details.sx .tw tr + tr td ,
+:is(#w2, #w4) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
+:is(#w2, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#w2, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th ,
+:is(#w2, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#w2, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
+#w3 .lp7 .ex .tw.scan td:first-child ,
+#w4 .lp7 .ex .tw.scan td:first-child { width: 34%; }
+#w3 .lp7 .ex .tw.scan td strong ,
+#w4 .lp7 .ex .tw.scan td strong { font-weight: 700; }
 /* v15-7: la consegna resta nella colonna a destra; il contenuto dell'esempio torna a partire dal margine sinistro */
 @media (min-width: 861px) {
-  :is(#w2, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
+  :is(#w2, #w3) .lp7 .ex .sx-i > .dd-body ,
+  :is(#w2, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
 }
-#w3 .lp7 .ex .tw.scan td:first-child { width: auto; }
+#w3 .lp7 .ex .tw.scan td:first-child ,
+#w4 .lp7 .ex .tw.scan td:first-child { width: auto; }
 /* colonne in bastoni: c1 = prima colonna, c2 = prime due */
-#w3 .lp7 .ex .tw.c1 td:first-child, #w3 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 0 !important; }
+#w3 .lp7 .ex .tw.c1 td:first-child, #w3 .lp7 .ex .tw.c2 td:nth-child(-n+2) ,
+#w4 .lp7 .ex .tw.c1 td:first-child, #w4 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 0 !important; }
 /* tutti i filetti delle tabelle grigio chiaro; niente ultimo filetto se la tabella chiude la voce (sotto c'è già il filetto della voce) */
-:is(#w2, #w3) .lp7 .ex details.sx .tw table, :is(#w2, #w3) .lp7 .ex details.sx .tw td, :is(#w2, #w3) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
-:is(#w2, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
+:is(#w2, #w3) .lp7 .ex details.sx .tw table, :is(#w2, #w3) .lp7 .ex details.sx .tw td, :is(#w2, #w3) .lp7 .ex details.sx .tw th ,
+:is(#w2, #w4) .lp7 .ex details.sx .tw table, :is(#w2, #w4) .lp7 .ex details.sx .tw td, :is(#w2, #w4) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
+:is(#w2, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td ,
+:is(#w2, #w4) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
 /* v15-8: le colonne in bastoni scendono di poco per stare sulla stessa riga del mono */
-#w3 .lp7 .ex .tw.c1 td:first-child, #w3 .lp7 .ex .tw.c2 td:nth-child(-n+2) { padding-top: 11px !important; }
+#w3 .lp7 .ex .tw.c1 td:first-child, #w3 .lp7 .ex .tw.c2 td:nth-child(-n+2) ,
+#w4 .lp7 .ex .tw.c1 td:first-child, #w4 .lp7 .ex .tw.c2 td:nth-child(-n+2) { padding-top: 11px !important; }
 /* v15-9: tabelle W3 — mono con lo stesso corpo della consegna (16/1.35); le colonne prima della colonna in mono stanno nei 410px, così il mono parte allineato alla consegna */
-#w3 .lp7 .ex details.sx .tw td { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
-#w3 .lp7 .ex .tw.c1 td:first-child, #w3 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; padding-top: 9px !important; }
+#w3 .lp7 .ex details.sx .tw td ,
+#w4 .lp7 .ex details.sx .tw td { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+#w3 .lp7 .ex .tw.c1 td:first-child, #w3 .lp7 .ex .tw.c2 td:nth-child(-n+2) ,
+#w4 .lp7 .ex .tw.c1 td:first-child, #w4 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; padding-top: 9px !important; }
 @media (min-width: 861px) {
-  #w3 .lp7 .ex .tw.c1 table, #w3 .lp7 .ex .tw.c2 table { table-layout: fixed; width: 100%; }
-  #w3 .lp7 .ex .tw.c1 :is(td, th) { box-sizing: border-box; }
-  #w3 .lp7 .ex .tw.c2 :is(td, th) { box-sizing: border-box; }
-  #w3 .lp7 .ex .tw.c1 tr > :first-child { width: 410px; }
-  #w3 .lp7 .ex .tw.c2 tr > :nth-child(1) { width: 150px; }
-  #w3 .lp7 .ex .tw.c2 tr > :nth-child(2) { width: 260px; padding-right: 24px; }
+  #w3 .lp7 .ex .tw.c1 table, #w3 .lp7 .ex .tw.c2 table ,
+  #w4 .lp7 .ex .tw.c1 table, #w4 .lp7 .ex .tw.c2 table { table-layout: fixed; width: 100%; }
+  #w3 .lp7 .ex .tw.c1 :is(td, th) ,
+  #w4 .lp7 .ex .tw.c1 :is(td, th) { box-sizing: border-box; }
+  #w3 .lp7 .ex .tw.c2 :is(td, th) ,
+  #w4 .lp7 .ex .tw.c2 :is(td, th) { box-sizing: border-box; }
+  #w3 .lp7 .ex .tw.c1 tr > :first-child ,
+  #w4 .lp7 .ex .tw.c1 tr > :first-child { width: 410px; }
+  #w3 .lp7 .ex .tw.c2 tr > :nth-child(1) ,
+  #w4 .lp7 .ex .tw.c2 tr > :nth-child(1) { width: 150px; }
+  #w3 .lp7 .ex .tw.c2 tr > :nth-child(2) ,
+  #w4 .lp7 .ex .tw.c2 tr > :nth-child(2) { width: 260px; padding-right: 24px; }
 }
 /* v15-10: tabelle W3 a due colonne — la prima come la frase-missione (bastoni bold), con la descrizione sotto in regular; la seconda in mono allineata alla consegna */
-#w3 .lp7 .ex .tw.c1 td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: clamp(14px, 1.15vw, 16px) !important; line-height: 1.24 !important; letter-spacing: 0 !important; padding-right: 24px !important; }
-#w3 .lp7 .ex .tw.c1 td:first-child .k { display: block; font-weight: 700; }
-#w3 .lp7 .ex .tw.c1 td:first-child .d { display: block; font-weight: 400; }
+#w3 .lp7 .ex .tw.c1 td:first-child ,
+#w4 .lp7 .ex .tw.c1 td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: clamp(14px, 1.15vw, 16px) !important; line-height: 1.24 !important; letter-spacing: 0 !important; padding-right: 24px !important; }
+#w3 .lp7 .ex .tw.c1 td:first-child .k ,
+#w4 .lp7 .ex .tw.c1 td:first-child .k { display: block; font-weight: 700; }
+#w3 .lp7 .ex .tw.c1 td:first-child .d ,
+#w4 .lp7 .ex .tw.c1 td:first-child .d { display: block; font-weight: 400; }
 /* v15-13: formattazione invertita — la consegna in alto a destra in bastoni bold come il testo breve delle righe chiuse; il testo dell'esempio sotto in mono (16/1.35). Le tabelle restano come sono */
-:is(#w2, #w3) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
-:is(#w2, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
-:is(#w2, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx > summary .sx-do p ,
+:is(#w2, #w4) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#w2, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) ,
+:is(#w2, #w4) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#w2, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) ,
+:is(#w2, #w4) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
 /* voce aperta: la consegna alla stessa distanza dal filo del testo breve nella riga chiusa (15,5px) */
-:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
 /* v15-14: titoletti delle sezioni (Che cosa cercare, Dove cercare…) in negativo, bastoni bold */
-#w3#w3 .lp7 .ex details.sx.sx .st-ex > p > strong:only-child { display: inline-block; font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: 0 !important; background: var(--ink); color: #fff; padding: 3px 7px 4px; }
+#w3#w3 .lp7 .ex details.sx.sx .st-ex > p > strong:only-child ,
+#w4#w4 .lp7 .ex details.sx.sx .st-ex > p > strong:only-child { display: inline-block; font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: 0 !important; background: var(--ink); color: #fff; padding: 3px 7px 4px; }
 /* v15-17: esempio nella consegna in negativo */
-:is(#w2, #w3) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#w2, #w3) .lp7 .ex details.sx .sx-do .neg ,
+:is(#w2, #w4) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* ===== v16: regole delle tabelle W3 applicate alla W2 ===== */
 #w2 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
@@ -1895,38 +1986,60 @@ h4.ex-logo img { height: 1.15em; width: auto; display: block; }
 /* ===== v17 ===== */
 /* numerazione: settimana implicita, fase.voce */
 #w2 .lp7 .ex > details.sx > summary h5::before { content: "(W2)1." counter(exn); }
-#w3 .lp7 .ex > details.sx > summary h5::before { content: "(W3)2." counter(exn); }
+#w3 .lp7 .ex > details.sx > summary h5::before ,
+#w4 .lp7 .ex > details.sx > summary h5::before { content: "(W3)2." counter(exn); }
 /* il numero con la settimana è più lungo: colonna più larga */
-:is(#w2, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
-:is(#w2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx > summary h5 ,
+:is(#w2, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#w2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary ,
+:is(#w2, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
 @media (max-width: 860px) {
-  :is(#w2, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
-  :is(#w2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
-  :is(#w2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
+  :is(#w2, #w3) .lp7 .ex > details.sx > summary h5 ,
+  :is(#w2, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
+  :is(#w2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary ,
+  :is(#w2, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
+  :is(#w2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before ,
+  :is(#w2, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
 }
 /* tabelle a tre colonne nella W3 (analisi), come il territorio culturale della W2 */
-#w3 .lp7 .ex .tw.terr td:nth-child(2), #w3 .lp7 .ex .tw.terr th:nth-child(2) { padding-right: 24px !important; }
+#w3 .lp7 .ex .tw.terr td:nth-child(2), #w3 .lp7 .ex .tw.terr th:nth-child(2) ,
+#w4 .lp7 .ex .tw.terr td:nth-child(2), #w4 .lp7 .ex .tw.terr th:nth-child(2) { padding-right: 24px !important; }
 @media (max-width: 860px) {
-  #w3 .lp7 .ex .tw.terr :is(table, tbody) { display: block; width: 100% !important; min-width: 0 !important; }
-  #w3 .lp7 .ex .tw.terr tr:first-child { display: none; }
-  #w3 .lp7 .ex .tw.terr tr { display: block; border-top: 1px solid #C8C8C8; padding: 10px 0 12px; }
-  #w3 .lp7 .ex .tw.terr td { display: block; width: auto !important; white-space: normal !important; border: 0 !important; padding: 0 0 6px !important; }
+  #w3 .lp7 .ex .tw.terr :is(table, tbody) ,
+  #w4 .lp7 .ex .tw.terr :is(table, tbody) { display: block; width: 100% !important; min-width: 0 !important; }
+  #w3 .lp7 .ex .tw.terr tr:first-child ,
+  #w4 .lp7 .ex .tw.terr tr:first-child { display: none; }
+  #w3 .lp7 .ex .tw.terr tr ,
+  #w4 .lp7 .ex .tw.terr tr { display: block; border-top: 1px solid #C8C8C8; padding: 10px 0 12px; }
+  #w3 .lp7 .ex .tw.terr td ,
+  #w4 .lp7 .ex .tw.terr td { display: block; width: auto !important; white-space: normal !important; border: 0 !important; padding: 0 0 6px !important; }
 }
-#w3 .lp7 .ex .st-ex > p.quote { margin: 0 0 22px !important; }
-#w3 .lp7 .ex .sx-do p b { font-weight: 700; }
+#w3 .lp7 .ex .st-ex > p.quote ,
+#w4 .lp7 .ex .st-ex > p.quote { margin: 0 0 22px !important; }
+#w3 .lp7 .ex .sx-do p b ,
+#w4 .lp7 .ex .sx-do p b { font-weight: 700; }
 /* v17-2: Scan Plan a quattro colonne */
 @media (min-width: 861px) {
-  #w3 .lp7 .ex .tw.scan4 td:nth-child(n+2), #w3 .lp7 .ex .tw.scan4 th:nth-child(n+2) { padding-right: 20px !important; }
+  #w3 .lp7 .ex .tw.scan4 td:nth-child(n+2), #w3 .lp7 .ex .tw.scan4 th:nth-child(n+2) ,
+  #w4 .lp7 .ex .tw.scan4 td:nth-child(n+2), #w4 .lp7 .ex .tw.scan4 th:nth-child(n+2) { padding-right: 20px !important; }
 }
 /* v17-3: Fonti a scomparsa sotto le tabelle dello Scan Plan, come la bibliografia */
-#w3 .lp7 .ex .fonti-det { margin: 6px 0 0; border-top: 0; }
-#w3 .lp7 .ex .fonti-det > summary { display: inline-flex; gap: 10px; padding: 6px 0; }
-#w3#w3 .lp7 .ex details.sx.sx .st-ex .fonti-in > p > strong:only-child { display: inline-block; font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: 0 !important; background: var(--ink); color: #fff; padding: 3px 7px 4px; }
-#w3 .lp7 .ex .fonti-in > p { margin: 22px 0 8px !important; }
-#w3#w3 .lp7 .ex details.sx.sx .st-ex .fonti-det > summary span { font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: .04em !important; }
-#w3 .lp7 .ex .fonti-det > summary i { width: 12px; height: 12px; }
-#w3 .lp7 .ex .fonti-det > summary i::before, #w3 .lp7 .ex .fonti-det > summary i::after { top: 5.5px; }
-#w3 .lp7 .ex .fonti-det[open] > summary { margin-bottom: 14px; }
+#w3 .lp7 .ex .fonti-det ,
+#w4 .lp7 .ex .fonti-det { margin: 6px 0 0; border-top: 0; }
+#w3 .lp7 .ex .fonti-det > summary ,
+#w4 .lp7 .ex .fonti-det > summary { display: inline-flex; gap: 10px; padding: 6px 0; }
+#w3#w3 .lp7 .ex details.sx.sx .st-ex .fonti-in > p > strong:only-child ,
+#w4#w4 .lp7 .ex details.sx.sx .st-ex .fonti-in > p > strong:only-child { display: inline-block; font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: 0 !important; background: var(--ink); color: #fff; padding: 3px 7px 4px; }
+#w3 .lp7 .ex .fonti-in > p ,
+#w4 .lp7 .ex .fonti-in > p { margin: 22px 0 8px !important; }
+#w3#w3 .lp7 .ex details.sx.sx .st-ex .fonti-det > summary span ,
+#w4#w4 .lp7 .ex details.sx.sx .st-ex .fonti-det > summary span { font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: .04em !important; }
+#w3 .lp7 .ex .fonti-det > summary i ,
+#w4 .lp7 .ex .fonti-det > summary i { width: 12px; height: 12px; }
+#w3 .lp7 .ex .fonti-det > summary i::before, #w3 .lp7 .ex .fonti-det > summary i::after ,
+#w4 .lp7 .ex .fonti-det > summary i::before, #w4 .lp7 .ex .fonti-det > summary i::after { top: 5.5px; }
+#w3 .lp7 .ex .fonti-det[open] > summary ,
+#w4 .lp7 .ex .fonti-det[open] > summary { margin-bottom: 14px; }
 /* v17-2: i tre livelli di Dragt, fasce dalla più stretta alla più larga */
 .lv3 { display: flex; flex-direction: column; gap: 6px; margin: 4px 0 30px; }
 .lv3 .lv { display: grid; grid-template-columns: 170px minmax(0, 1fr) 220px; gap: 18px; align-items: baseline; padding: 14px 18px; }
@@ -1936,11 +2049,16 @@ h4.ex-logo img { height: 1.15em; width: auto; display: block; }
 .lv3 .lv-v { width: 85%; background: #C8C8C8; }
 .lv3 .lv-m { width: 100%; background: #FFFFFF; border: 1px solid #111111; box-sizing: border-box; }
 .lv3 small { font-family: var(--sans); font-size: 12px; margin-top: 6px; }
-#w3 .lp7 .ex details.sx .st-ex .lv3 :is(span, b, i, small) { letter-spacing: 0 !important; }
-#w3 .lp7 .ex details.sx .st-ex .lv3 .lv b { font-family: var(--sans) !important; font-weight: 700 !important; font-size: 17px !important; }
-#w3 .lp7 .ex details.sx .st-ex .lv3 .lv span { font-weight: 400 !important; }
-#w3 .lp7 .ex details.sx .st-ex .lv3 .lv i { font-family: var(--sans) !important; font-weight: 700 !important; font-size: 14px !important; }
-#w3 .lp7 .ex details.sx .st-ex .lv3 small, #w3 .lp7 .ex details.sx .st-ex .lv3 small em { font-family: var(--sans) !important; font-size: 12px !important; font-weight: 400 !important; }
+#w3 .lp7 .ex details.sx .st-ex .lv3 :is(span, b, i, small) ,
+#w4 .lp7 .ex details.sx .st-ex .lv3 :is(span, b, i, small) { letter-spacing: 0 !important; }
+#w3 .lp7 .ex details.sx .st-ex .lv3 .lv b ,
+#w4 .lp7 .ex details.sx .st-ex .lv3 .lv b { font-family: var(--sans) !important; font-weight: 700 !important; font-size: 17px !important; }
+#w3 .lp7 .ex details.sx .st-ex .lv3 .lv span ,
+#w4 .lp7 .ex details.sx .st-ex .lv3 .lv span { font-weight: 400 !important; }
+#w3 .lp7 .ex details.sx .st-ex .lv3 .lv i ,
+#w4 .lp7 .ex details.sx .st-ex .lv3 .lv i { font-family: var(--sans) !important; font-weight: 700 !important; font-size: 14px !important; }
+#w3 .lp7 .ex details.sx .st-ex .lv3 small, #w3 .lp7 .ex details.sx .st-ex .lv3 small em ,
+#w4 .lp7 .ex details.sx .st-ex .lv3 small, #w4 .lp7 .ex details.sx .st-ex .lv3 small em { font-family: var(--sans) !important; font-size: 12px !important; font-weight: 400 !important; }
 @media (max-width: 860px) {
   .lv3 .lv { grid-template-columns: 1fr; gap: 4px; width: 100% !important; box-sizing: border-box; }
 }
@@ -1960,32 +2078,55 @@ dialog.modal .m-tabs button.on { background: none !important; color: var(--ink);
 dialog.modal .m-who { margin-top: 6px; }
 dialog.modal .m-note { font-family: var(--sans); font-size: 14px; margin: 10px 0 14px; padding: 10px 12px; background: var(--pill); }
 .badge.b-forza { background: var(--ink); color: #fff; }
-#w3 .lp7 .ex .fonti-in .val-intro { margin: 0 0 12px !important; }
+#w3 .lp7 .ex .fonti-in .val-intro ,
+#w4 .lp7 .ex .fonti-in .val-intro { margin: 0 0 12px !important; }
 /* v17-9: suggerimenti a comparsa, elenco con frecce, checklist */
-#w3 .lp7 .ex .sx-do .tip { margin: 14px 0 0; }
-#w3 .lp7 .ex .sx-do .tip-b { display: inline-flex; align-items: center; gap: 10px; padding: 6px 0; border: 0; background: none; cursor: pointer; font-family: var(--sans); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); }
-#w3 .lp7 .ex .sx-do .tip-b i { position: relative; width: 12px; height: 12px; }
-#w3 .lp7 .ex .sx-do .tip-b i::before, #w3 .lp7 .ex .sx-do .tip-b i::after { content: ""; position: absolute; left: 0; top: 5px; width: 12px; height: 2px; background: currentColor; transition: transform .2s; }
-#w3 .lp7 .ex .sx-do .tip-b i::after { transform: rotate(90deg); }
-#w3 .lp7 .ex .sx-do .tip.open .tip-b i::after { transform: rotate(0deg); }
-#w3 .lp7 .ex .sx-do .tip-in { display: none; margin-top: 8px; padding: 14px 16px; border: 1px solid var(--ink); }
-#w3 .lp7 .ex .sx-do .tip.open .tip-in { display: block; }
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p { font-size: 15px !important; font-weight: 400 !important; line-height: 1.4 !important; letter-spacing: 0 !important; }
-#w3 .lp7 .ex .sx-do :is(ul.arr, ul.chk) { list-style: none; margin: 0 0 .6em; padding: 0; }
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do :is(ul.arr, ul.chk) li { position: relative; padding: 0 0 0 28px !important; margin: 0 0 .3em !important; border: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
-#w3 .lp7 .ex .sx-do :is(ul.arr, ul.chk) li b { font-weight: 700; }
-#w3 .lp7 .ex .sx-do ul.arr li::before { content: "→"; position: absolute; left: 0; top: 0; font-weight: 700; }
-#w3 .lp7 .ex .sx-do ul.chk li::before { content: ""; position: absolute; left: 3px; top: .18em; width: 6px; height: 12px; border: solid var(--ink); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+#w3 .lp7 .ex .sx-do .tip ,
+#w4 .lp7 .ex .sx-do .tip { margin: 14px 0 0; }
+#w3 .lp7 .ex .sx-do .tip-b ,
+#w4 .lp7 .ex .sx-do .tip-b { display: inline-flex; align-items: center; gap: 10px; padding: 6px 0; border: 0; background: none; cursor: pointer; font-family: var(--sans); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); }
+#w3 .lp7 .ex .sx-do .tip-b i ,
+#w4 .lp7 .ex .sx-do .tip-b i { position: relative; width: 12px; height: 12px; }
+#w3 .lp7 .ex .sx-do .tip-b i::before, #w3 .lp7 .ex .sx-do .tip-b i::after ,
+#w4 .lp7 .ex .sx-do .tip-b i::before, #w4 .lp7 .ex .sx-do .tip-b i::after { content: ""; position: absolute; left: 0; top: 5px; width: 12px; height: 2px; background: currentColor; transition: transform .2s; }
+#w3 .lp7 .ex .sx-do .tip-b i::after ,
+#w4 .lp7 .ex .sx-do .tip-b i::after { transform: rotate(90deg); }
+#w3 .lp7 .ex .sx-do .tip.open .tip-b i::after ,
+#w4 .lp7 .ex .sx-do .tip.open .tip-b i::after { transform: rotate(0deg); }
+#w3 .lp7 .ex .sx-do .tip-in ,
+#w4 .lp7 .ex .sx-do .tip-in { display: none; margin-top: 8px; padding: 14px 16px; border: 1px solid var(--ink); }
+#w3 .lp7 .ex .sx-do .tip.open .tip-in ,
+#w4 .lp7 .ex .sx-do .tip.open .tip-in { display: block; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in p { font-size: 15px !important; font-weight: 400 !important; line-height: 1.4 !important; letter-spacing: 0 !important; }
+#w3 .lp7 .ex .sx-do :is(ul.arr, ul.chk) ,
+#w4 .lp7 .ex .sx-do :is(ul.arr, ul.chk) { list-style: none; margin: 0 0 .6em; padding: 0; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do :is(ul.arr, ul.chk) li ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do :is(ul.arr, ul.chk) li { position: relative; padding: 0 0 0 28px !important; margin: 0 0 .3em !important; border: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+#w3 .lp7 .ex .sx-do :is(ul.arr, ul.chk) li b ,
+#w4 .lp7 .ex .sx-do :is(ul.arr, ul.chk) li b { font-weight: 700; }
+#w3 .lp7 .ex .sx-do ul.arr li::before ,
+#w4 .lp7 .ex .sx-do ul.arr li::before { content: "→"; position: absolute; left: 0; top: 0; font-weight: 700; }
+#w3 .lp7 .ex .sx-do ul.chk li::before ,
+#w4 .lp7 .ex .sx-do ul.chk li::before { content: ""; position: absolute; left: 3px; top: .18em; width: 6px; height: 12px; border: solid var(--ink); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
 /* v17-10: margini uguali nel suggerimento; tabelle dei valori con i gruppi */
-#w3 .lp7 .ex .sx-do .tip-in { padding: 16px 18px; }
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p:last-child { margin-bottom: 0 !important; }
-#w3 .lp7 .ex .val2 tr.vgrp td { font-family: var(--sans); font-weight: 700; padding-top: 14px; }
+#w3 .lp7 .ex .sx-do .tip-in ,
+#w4 .lp7 .ex .sx-do .tip-in { padding: 16px 18px; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p:last-child ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in p:last-child { margin-bottom: 0 !important; }
+#w3 .lp7 .ex .val2 tr.vgrp td ,
+#w4 .lp7 .ex .val2 tr.vgrp td { font-family: var(--sans); font-weight: 700; padding-top: 14px; }
 /* v17-11: elenchi dentro il suggerimento */
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in :is(ul.arr, ul.chk) li { font-size: 15px !important; font-weight: 400 !important; line-height: 1.4 !important; letter-spacing: 0 !important; padding-left: 24px !important; }
-#w3 .lp7 .ex .sx-do .tip-in ul.arr { margin: 0 0 1em; }
-#w3 .lp7 .ex .sx-do .tip-in ul.arr:last-child { margin-bottom: 0; }
-#w3 .lp7 .ex .sx-do .tip-in ul.arr li::before { font-weight: 400; }
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p { margin: 0 0 .4em !important; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in :is(ul.arr, ul.chk) li ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in :is(ul.arr, ul.chk) li { font-size: 15px !important; font-weight: 400 !important; line-height: 1.4 !important; letter-spacing: 0 !important; padding-left: 24px !important; }
+#w3 .lp7 .ex .sx-do .tip-in ul.arr ,
+#w4 .lp7 .ex .sx-do .tip-in ul.arr { margin: 0 0 1em; }
+#w3 .lp7 .ex .sx-do .tip-in ul.arr:last-child ,
+#w4 .lp7 .ex .sx-do .tip-in ul.arr:last-child { margin-bottom: 0; }
+#w3 .lp7 .ex .sx-do .tip-in ul.arr li::before ,
+#w4 .lp7 .ex .sx-do .tip-in ul.arr li::before { font-weight: 400; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in p { margin: 0 0 .4em !important; }
 /* v17-12: card della griglia tutte alte uguali; F di forza a destra; IKEA e USA in basso a sinistra */
 .sig-grid .sig { gap: 10px; }
 .sig-grid .sig-top { flex-wrap: nowrap; align-items: center; }
@@ -1997,9 +2138,12 @@ dialog.modal .m-note { font-family: var(--sans); font-size: 14px; margin: 10px 0
 .sig-grid .sig-t { height: calc(4 * 1.3em); flex: none; }
 .sig-grid .sig-bot { display: flex; gap: 6px; align-items: flex-end; min-height: 34px; margin-top: auto; }
 /* v18-1: elenchi stretti nel suggerimento, senza grassetto */
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in ul.arr.tight li { margin: 0 !important; line-height: 1.3 !important; }
-#w3 .lp7 .ex .sx-do .tip-in ul.arr.tight { margin: 0 0 .8em; }
-#w3 .lp7 .ex .sx-do .tip-in ul.arr.tight:last-child { margin-bottom: 0; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in ul.arr.tight li ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in ul.arr.tight li { margin: 0 !important; line-height: 1.3 !important; }
+#w3 .lp7 .ex .sx-do .tip-in ul.arr.tight ,
+#w4 .lp7 .ex .sx-do .tip-in ul.arr.tight { margin: 0 0 .8em; }
+#w3 .lp7 .ex .sx-do .tip-in ul.arr.tight:last-child ,
+#w4 .lp7 .ex .sx-do .tip-in ul.arr.tight:last-child { margin-bottom: 0; }
 /* v18-1: card che si adattano all’altezza della riga; Forza in basso come IKEA, ma nera */
 .sig-grid .sig-t { height: auto; }
 .sig-grid .sig-bot { min-height: 0; }
@@ -2010,35 +2154,53 @@ dialog.modal .m-note { font-family: var(--sans); font-size: 14px; margin: 10px 0
 .cdot.c-A { border-radius: 0 !important; background: linear-gradient(90deg, var(--ink) 50%, #fff 50%) !important; }
 .cdot.c-P { border-radius: 0 !important; background: var(--ink) !important; }
 /* v18-2: parole chiave sottolineate nella consegna */
-#w3 .lp7 .ex .sx-do .ul { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+#w3 .lp7 .ex .sx-do .ul ,
+#w4 .lp7 .ex .sx-do .ul { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 /* v18-3: definizioni a freccia senza spazio tra le righe; elenchi del suggerimento attaccati al titolo */
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li { margin: 0 !important; }
-#w3 .lp7 .ex .sx-do ul.arr.defs { margin: 0 0 .6em; }
-#w3 .lp7 .ex .sx-do ul.arr.defs li i { font-style: italic; }
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p:has(+ ul) { margin-bottom: 0 !important; }
-#w3 .lp7 .ex .sx-do .tip-in ul.arr.tight { margin-top: 0; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li { margin: 0 !important; }
+#w3 .lp7 .ex .sx-do ul.arr.defs ,
+#w4 .lp7 .ex .sx-do ul.arr.defs { margin: 0 0 .6em; }
+#w3 .lp7 .ex .sx-do ul.arr.defs li i ,
+#w4 .lp7 .ex .sx-do ul.arr.defs li i { font-style: italic; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p:has(+ ul) ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in p:has(+ ul) { margin-bottom: 0 !important; }
+#w3 .lp7 .ex .sx-do .tip-in ul.arr.tight ,
+#w4 .lp7 .ex .sx-do .tip-in ul.arr.tight { margin-top: 0; }
 /* v18-4: corsivo in grassetto nelle definizioni */
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li i { font-weight: 700 !important; font-style: italic !important; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li i ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li i { font-weight: 700 !important; font-style: italic !important; }
 /* v18-4: suggerimento della 2.2 su due colonne; la seconda parte dove comincia la colonna «Dove» delle tabelle */
-#w3 .lp7 .ex .sx-do .tip2 { display: grid; grid-template-columns: 1fr; row-gap: 16px; }
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tip-ex { margin: 8px 0 0 !important; font-style: italic !important; }
+#w3 .lp7 .ex .sx-do .tip2 ,
+#w4 .lp7 .ex .sx-do .tip2 { display: grid; grid-template-columns: 1fr; row-gap: 16px; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tip-ex ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tip-ex { margin: 8px 0 0 !important; font-style: italic !important; }
 @media (min-width: 861px) {
-  #w3 .lp7 .ex .sx-do .tip-wide .tip-in { box-sizing: border-box; width: calc(100vw - 450px); max-width: none; padding: 16px 18px; }
-  #w3 .lp7 .ex .sx-do .tip2 { grid-template-columns: 50% 1fr; column-gap: 0; }
-  #w3 .lp7 .ex .sx-do .tip2 > div:first-child { padding-right: 24px; }
+  #w3 .lp7 .ex .sx-do .tip-wide .tip-in ,
+  #w4 .lp7 .ex .sx-do .tip-wide .tip-in { box-sizing: border-box; width: calc(100vw - 450px); max-width: none; padding: 16px 18px; }
+  #w3 .lp7 .ex .sx-do .tip2 ,
+  #w4 .lp7 .ex .sx-do .tip2 { grid-template-columns: 50% 1fr; column-gap: 0; }
+  #w3 .lp7 .ex .sx-do .tip2 > div:first-child ,
+  #w4 .lp7 .ex .sx-do .tip2 > div:first-child { padding-right: 24px; }
 }
 /* v18-4: a voce aperta, accanto al titolo compare IKEA */
-:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
+:is(#w2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after ,
+:is(#w2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
 /* futuri di Voros: cinque carte */
 .fc-0 { background: #FFFFFF; } .fc-1 { background: #E9E9E9; } .fc-2 { background: #C8C8C8; } .fc-3 { background: #555555; color: #FFFFFF; } .fc-4 { background: #111111; color: #FFFFFF; }
 
 /* v19-1: parole chiave delle definizioni in grassetto dritto; checklist nel suggerimento su due colonne */
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li b.kw { font-weight: 700 !important; font-style: normal !important; }
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in ul.chk li { margin: 0 !important; line-height: 1.3 !important; }
-#w3 .lp7 .ex .sx-do .tip-in ul.chk { margin: 0; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li b.kw ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li b.kw { font-weight: 700 !important; font-style: normal !important; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in ul.chk li ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in ul.chk li { margin: 0 !important; line-height: 1.3 !important; }
+#w3 .lp7 .ex .sx-do .tip-in ul.chk ,
+#w4 .lp7 .ex .sx-do .tip-in ul.chk { margin: 0; }
 /* v19-3: niente spazio tra la frase e le definizioni a freccia */
-#w3#w3 .lp7 .ex > details.sx > summary .sx-do p:has(+ ul.arr.defs) { margin-bottom: 0 !important; }
-#w3 .lp7 .ex .sx-do .tip-in ul.chk li::before { border-width: 0 2px 2px 0; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do p:has(+ ul.arr.defs) ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do p:has(+ ul.arr.defs) { margin-bottom: 0 !important; }
+#w3 .lp7 .ex .sx-do .tip-in ul.chk li::before ,
+#w4 .lp7 .ex .sx-do .tip-in ul.chk li::before { border-width: 0 2px 2px 0; }
 
 /* v21-1: esercitazioni — cerchio come quelli delle unità, a sinistra della X, con il tratto della X */
 .lp7-nav { display: flex; align-items: center; gap: 16px; }
@@ -2077,7 +2239,8 @@ html.exp-on .exp-veil { display: block; }
 .lp7 .lp-first .l-d { font-family: "Times New Roman", Times, serif !important; font-size: 21px !important; line-height: 1.32 !important; letter-spacing: 0 !important; color: var(--fg) !important; }
 /* numerazione: progetto (W2)P1.1, (W3)P2.1 */
 #w2 .lp7 .ex > details.sx > summary h5::before { content: "(W2)P1." counter(exn); }
-#w3 .lp7 .ex > details.sx > summary h5::before { content: "(W3)P2." counter(exn); }
+#w3 .lp7 .ex > details.sx > summary h5::before ,
+#w4 .lp7 .ex > details.sx > summary h5::before { content: "(W3)P2." counter(exn); }
 /* Struttura: riga Esercitazioni, cerchio alto come i pill del progetto */
 .gantt .g-ex { all: unset; box-sizing: border-box; cursor: pointer; justify-self: start; align-self: center; width: 30.5px; height: 30.5px; border: 1px solid var(--fg); border-radius: 50%; display: grid; place-items: center; font-family: var(--sans); font-size: 11px; font-weight: 700; color: var(--fg); }
 .gantt .g-ex:hover, .gantt .g-ex:focus-visible { background: var(--fg); color: var(--bg); }
@@ -2136,35 +2299,58 @@ html.exp-on .exp-veil { display: block; }
 #e1 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
 }
 #e1 .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
-:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx > summary .sx-do ,
+:is(#e1, #w4) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary h5 ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
+:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#e1, #w4) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
 @media (max-width: 860px) {
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
-:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
+:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#e1, #w4) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
 }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
-:is(#e1, #w3) .lp7 .ex details.sx .st-ex > small { display: none !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .st-ex > small ,
+:is(#e1, #w4) .lp7 .ex details.sx .st-ex > small { display: none !important; }
 @media (min-width: 861px) {
-:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
+:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#e1, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
 }
-:is(#e1, #w3) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
-:is(#e1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .tw tr + tr td ,
+:is(#e1, #w4) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th ,
+:is(#e1, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e1, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
 @media (min-width: 861px) {
-:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
+:is(#e1, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#e1, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
 }
-:is(#e1, #w3) .lp7 .ex details.sx .tw table, :is(#e1, #w3) .lp7 .ex details.sx .tw td, :is(#e1, #w3) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
-:is(#e1, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
-:is(#e1, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
-:is(#e1, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
-:is(#e1, #w3) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#e1, #w3) .lp7 .ex details.sx .tw table, :is(#e1, #w3) .lp7 .ex details.sx .tw td, :is(#e1, #w3) .lp7 .ex details.sx .tw th ,
+:is(#e1, #w4) .lp7 .ex details.sx .tw table, :is(#e1, #w4) .lp7 .ex details.sx .tw td, :is(#e1, #w4) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td ,
+:is(#e1, #w4) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx > summary .sx-do p ,
+:is(#e1, #w4) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#e1, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) ,
+:is(#e1, #w4) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) ,
+:is(#e1, #w4) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
+:is(#e1, #w3) .lp7 .ex details.sx .sx-do .neg ,
+:is(#e1, #w4) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 #e1 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
 #e1 .lp7 .ex .tw td { vertical-align: top; }
 #e1 .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
@@ -2196,14 +2382,20 @@ html.exp-on .exp-veil { display: block; }
 #e1 .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene: '; font-family: var(--sans); font-weight: 700; }
 }
 #e1 .lp7 .ex > details.sx > summary h5::before { content: "(W2)1." counter(exn); }
-:is(#e1, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx > summary h5 ,
+:is(#e1, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary ,
+:is(#e1, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
 @media (max-width: 860px) {
-:is(#e1, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
-:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx > summary h5 ,
+:is(#e1, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary ,
+:is(#e1, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#e1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before ,
+:is(#e1, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
 }
-:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
+:is(#e1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after ,
+:is(#e1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
 #e1 .lp7 .ex > details.sx > summary h5::before { content: "(E1)" counter(exn); }
 #e1 .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: none; }
 #e1 .lp7 .ex > details.sx > summary h5::before { content: "(W1)E1." counter(exn); }
@@ -2223,9 +2415,11 @@ html.exp-on .exp-veil { display: block; }
 #w2#w2#w2 .card.bv .sino > span { font-family: var(--sans) !important; letter-spacing: 0 !important; font-size: 13px !important; line-height: 1.35 !important; }
 /* v21-13: numerazione con un piccolo spazio dopo la P (e dopo la E); niente filo sotto l'ultima voce */
 #w2 .lp7 .ex > details.sx > summary h5::before { content: "(W2)P\2006 1." counter(exn); }
-#w3 .lp7 .ex > details.sx > summary h5::before { content: "(W3)P\2006 2." counter(exn); }
-:is(#w2, #w3)#w2#w2 .lp7 .ex > details.sx:last-of-type, :is(#w2, #w3) .lp7 .ex > details.sx:last-of-type > summary { border-bottom: 0 !important; }
-#w2#w2 .lp7 .ex > details.sx:last-of-type, #w3#w3 .lp7 .ex > details.sx:last-of-type { border-bottom: 0 !important; }
+#w3 .lp7 .ex > details.sx > summary h5::before ,
+#w4 .lp7 .ex > details.sx > summary h5::before { content: "(W3)P\2006 2." counter(exn); }
+:is(#w2, #w3)#w2#w2 .lp7 .ex > details.sx:last-of-type, :is(#w2, #w3) .lp7 .ex > details.sx:last-of-type > summary ,
+:is(#w2, #w4)#w2#w2 .lp7 .ex > details.sx:last-of-type, :is(#w2, #w4) .lp7 .ex > details.sx:last-of-type > summary { border-bottom: 0 !important; }
+#w2#w2 .lp7 .ex > details.sx:last-of-type, #w3#w3 .lp7 .ex > details.sx:last-of-type , #w4#w4 .lp7 .ex > details.sx:last-of-type { border-bottom: 0 !important; }
 /* v21-14: ricevimenti — schede dei trimestri con frecce, una scheda per data */
 .rv-bar { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--rule); padding-bottom: 10px; margin-top: 26px; }
 .rc-tabs { display: flex; gap: 34px; flex-wrap: wrap; }
@@ -2282,134 +2476,274 @@ html.exp-on .exp-veil { display: block; }
 
 /* v22-6: E2 — regole di E1 copiate per #e2 */
 #e2 .lp7 .ba .ex { display: block !important; }
+/* v22-6: E2 — regole di E1 copiate per #e3 */
+#e3 .lp7 .ba .ex { display: block !important; }
 #e2 .lp7 .ex > details.sub { grid-column: auto !important; margin: 0 !important; }
+#e3 .lp7 .ex > details.sub { grid-column: auto !important; margin: 0 !important; }
 #e2 .lp7 .p-body .ex .dd-body:has(> .st-do),
 #e2 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .dd-body { display: block !important; }
+#e3 .lp7 .p-body .ex .dd-body:has(> .st-do), #e3 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .dd-body { display: block !important; }
 #e2 .lp7 .ex .st-do { max-width: 832px !important; margin: 0 0 24px !important; }
+#e3 .lp7 .ex .st-do { max-width: 832px !important; margin: 0 0 24px !important; }
 #e2 .lp7 .ex .st-do p, #e2 .lp7 .ex .st-do li { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; font-weight: 400 !important; letter-spacing: 0 !important; }
+#e3 .lp7 .ex .st-do p, #e3 .lp7 .ex .st-do li { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; font-weight: 400 !important; letter-spacing: 0 !important; }
 #e2 .lp7 .ex > details.sub > summary h5::before { content: "2." counter(exn, decimal-leading-zero); }
+#e3 .lp7 .ex > details.sub > summary h5::before { content: "3." counter(exn, decimal-leading-zero); }
 @media (min-width: 861px) {
 #e2 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .fl-ex li { grid-template-columns: 12em minmax(0, 1fr) !important; gap: 12px !important; }
+#e3 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .fl-ex li { grid-template-columns: 12em minmax(0, 1fr) !important; gap: 12px !important; }
 #e2 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .vm { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 32px !important; }
+#e3 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .vm { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 32px !important; }
 #e2 .lp7 .ex .st-ex .fl-ex, #e2 .lp7 .ex .st-ex .vm, #e2 .lp7 .ex .st-ex > p.quote { max-width: 936px; }
+#e3 .lp7 .ex .st-ex .fl-ex, #e3 .lp7 .ex .st-ex .vm, #e3 .lp7 .ex .st-ex > p.quote { max-width: 936px; }
 }
 #e2 .lp7 .ex .st-ex > small { display: block !important; margin: 0 0 8px !important; }
+#e3 .lp7 .ex .st-ex > small { display: block !important; margin: 0 0 8px !important; }
 #e2 .lp7 .ex > details.sx { padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--ink) !important; }
+#e3 .lp7 .ex > details.sx { padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--ink) !important; }
 #e2 .lp7 .ex > details.sx:last-of-type { border-bottom: 1px solid var(--ink) !important; }
+#e3 .lp7 .ex > details.sx:last-of-type { border-bottom: 1px solid var(--ink) !important; }
 #e2 .lp7 .ex > details.sx > summary { display: grid !important; grid-template-columns: 370px minmax(0, 1fr); align-items: baseline; padding: 16px 0 !important; cursor: pointer !important; pointer-events: auto !important; list-style: none; border: 0 !important; }
+#e3 .lp7 .ex > details.sx > summary { display: grid !important; grid-template-columns: 370px minmax(0, 1fr); align-items: baseline; padding: 16px 0 !important; cursor: pointer !important; pointer-events: auto !important; list-style: none; border: 0 !important; }
 #e2 .lp7 .ex > details.sx > summary::-webkit-details-marker { display: none; }
+#e3 .lp7 .ex > details.sx > summary::-webkit-details-marker { display: none; }
 #e2 .lp7 .ex > details.sx > summary h5 { position: relative; display: grid !important; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; margin: 0 !important; }
+#e3 .lp7 .ex > details.sx > summary h5 { position: relative; display: grid !important; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; margin: 0 !important; }
 #e2 .lp7 .ex > details.sx > summary h5::before { display: block !important; font-size: clamp(22px, 2vw, 28px) !important; line-height: 1 !important; margin: 0 !important; transition: font-size .3s ease; }
+#e3 .lp7 .ex > details.sx > summary h5::before { display: block !important; font-size: clamp(22px, 2vw, 28px) !important; line-height: 1 !important; margin: 0 !important; transition: font-size .3s ease; }
 #e2 .lp7 .ex > details.sx > summary h5::after { content: ">"; position: absolute; left: 130px; margin-left: -1.1em; top: auto; bottom: 0; line-height: 1.2; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+#e3 .lp7 .ex > details.sx > summary h5::after { content: ">"; position: absolute; left: 130px; margin-left: -1.1em; top: auto; bottom: 0; line-height: 1.2; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
 #e2 .lp7 .ex > details.sx > summary:hover h5::after, #e2 .lp7 .ex > details.sx > summary:focus-visible h5::after { opacity: 1; transform: none; }
+#e3 .lp7 .ex > details.sx > summary:hover h5::after, #e3 .lp7 .ex > details.sx > summary:focus-visible h5::after { opacity: 1; transform: none; }
 #e2 .lp7 .ex .sx-k { margin: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em; color: var(--ink); }
+#e3 .lp7 .ex .sx-k { margin: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em; color: var(--ink); }
 #e2 .lp7 .ex > details.sx.sx-open > summary { display: block !important; padding: 20px 0 0 !important; }
+#e3 .lp7 .ex > details.sx.sx-open > summary { display: block !important; padding: 20px 0 0 !important; }
 #e2 .lp7 .ex > details.sx.sx-open > summary h5 { display: block !important; }
+#e3 .lp7 .ex > details.sx.sx-open > summary h5 { display: block !important; }
 #e2 .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: clamp(40px, 4.4vw, 64px) !important; line-height: .9 !important; margin: 0 0 10px !important; }
+#e3 .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: clamp(40px, 4.4vw, 64px) !important; line-height: .9 !important; margin: 0 0 10px !important; }
 #e2 .lp7 .ex > details.sx.sx-open > summary h5::after, #e2 .lp7 .ex > details.sx.sx-open .sx-k { display: none !important; }
+#e3 .lp7 .ex > details.sx.sx-open > summary h5::after, #e3 .lp7 .ex > details.sx.sx-open .sx-k { display: none !important; }
 #e2 .lp7 .ex .sx-p { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+#e3 .lp7 .ex .sx-p { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
 #e2 .lp7 .ex .sx-i { overflow: hidden; min-height: 0; }
+#e3 .lp7 .ex .sx-i { overflow: hidden; min-height: 0; }
 #e2 .lp7 .ex details.sx.sx-open .sx-p { grid-template-rows: 1fr; }
+#e3 .lp7 .ex details.sx.sx-open .sx-p { grid-template-rows: 1fr; }
 #e2 .lp7 .ex details.sx:not(.sx-open) .sx-i { visibility: hidden; transition: visibility 0s .45s; }
+#e3 .lp7 .ex details.sx:not(.sx-open) .sx-i { visibility: hidden; transition: visibility 0s .45s; }
 #e2 .lp7 .ex .sx-i > .dd-body { padding: 24px 0 40px !important; }
+#e3 .lp7 .ex .sx-i > .dd-body { padding: 24px 0 40px !important; }
 @media (max-width: 860px) {
 #e2 .lp7 .ex > details.sx > summary { grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
+#e3 .lp7 .ex > details.sx > summary { grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
 #e2 .lp7 .ex > details.sx > summary h5 { grid-template-columns: 72px minmax(0, 1fr); }
+#e3 .lp7 .ex > details.sx > summary h5 { grid-template-columns: 72px minmax(0, 1fr); }
 #e2 .lp7 .ex > details.sx > summary h5::after { left: 72px; }
+#e3 .lp7 .ex > details.sx > summary h5::after { left: 72px; }
 #e2 .lp7 .ex .sx-k { padding-left: 72px; }
+#e3 .lp7 .ex .sx-k { padding-left: 72px; }
 }
 #e2 .lp7 .ex > details.sx { border-top-color: #C8C8C8 !important; }
+#e3 .lp7 .ex > details.sx { border-top-color: #C8C8C8 !important; }
 #e2 .lp7 .ex > details.sx:last-of-type { border-bottom-color: #C8C8C8 !important; }
+#e3 .lp7 .ex > details.sx:last-of-type { border-bottom-color: #C8C8C8 !important; }
 #e2 .lp7 .ex > details.sx > summary h5::after { content: none !important; }
+#e3 .lp7 .ex > details.sx > summary h5::after { content: none !important; }
 #e2 .lp7 .ex .sx-t { position: relative; }
+#e3 .lp7 .ex .sx-t { position: relative; }
 #e2 .lp7 .ex .sx-t::before { content: ">"; position: absolute; right: 100%; margin-right: .5em; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+#e3 .lp7 .ex .sx-t::before { content: ">"; position: absolute; right: 100%; margin-right: .5em; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
 #e2 .lp7 .ex > details.sx > summary:hover .sx-t::before, #e2 .lp7 .ex > details.sx > summary:focus-visible .sx-t::before { opacity: 1; transform: none; }
+#e3 .lp7 .ex > details.sx > summary:hover .sx-t::before, #e3 .lp7 .ex > details.sx > summary:focus-visible .sx-t::before { opacity: 1; transform: none; }
 #e2 .lp7 .ex > details.sx.sx-open .sx-t::before { display: none; }
+#e3 .lp7 .ex > details.sx.sx-open .sx-t::before { display: none; }
 #e2 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 130px 280px minmax(0, 1fr); column-gap: 0; align-items: baseline; }
+#e3 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 130px 280px minmax(0, 1fr); column-gap: 0; align-items: baseline; }
 #e2 .lp7 .ex > details.sx:not(.sx-open) > summary h5 { display: contents !important; }
+#e3 .lp7 .ex > details.sx:not(.sx-open) > summary h5 { display: contents !important; }
 #e2 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { grid-column: 1; grid-row: 1; }
+#e3 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { grid-column: 1; grid-row: 1; }
 #e2 .lp7 .ex > details.sx:not(.sx-open) .sx-t { grid-column: 2; grid-row: 1; padding-right: 16px; }
+#e3 .lp7 .ex > details.sx:not(.sx-open) .sx-t { grid-column: 2; grid-row: 1; padding-right: 16px; }
 #e2 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 3; grid-row: 1; }
+#e3 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 3; grid-row: 1; }
 @media (max-width: 860px) {
 #e2 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 72px minmax(0, 1fr); row-gap: 6px; }
+#e3 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 72px minmax(0, 1fr); row-gap: 6px; }
 #e2 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
+#e3 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
 }
 #e2 .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
-:is(#e2, #w3) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
+#e3 .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx > summary .sx-do ,
+:is(#e2, #w4) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx > summary .sx-do, :is(#e3, #w4) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary h5 ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary h5, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
+:is(#e2, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#e2, #w4) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
+:is(#e3, #w3) .lp7 .ex .sx-i > .dd-body, :is(#e3, #w4) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
 @media (max-width: 860px) {
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
-:is(#e2, #w3) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
+:is(#e2, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#e2, #w4) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
+:is(#e3, #w3) .lp7 .ex .sx-i > .dd-body, :is(#e3, #w4) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
 }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
-:is(#e2, #w3) .lp7 .ex details.sx .st-ex > small { display: none !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
+:is(#e2, #w3) .lp7 .ex details.sx .st-ex > small ,
+:is(#e2, #w4) .lp7 .ex details.sx .st-ex > small { display: none !important; }
+:is(#e3, #w3) .lp7 .ex details.sx .st-ex > small, :is(#e3, #w4) .lp7 .ex details.sx .st-ex > small { display: none !important; }
 @media (min-width: 861px) {
-:is(#e2, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
+:is(#e2, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#e2, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
+:is(#e3, #w3) .lp7 .ex .sx-i > .dd-body, :is(#e3, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
 }
-:is(#e2, #w3) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
-:is(#e2, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e2, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
+:is(#e2, #w3) .lp7 .ex details.sx .tw tr + tr td ,
+:is(#e2, #w4) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
+:is(#e3, #w3) .lp7 .ex details.sx .tw tr + tr td, :is(#e3, #w4) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
+:is(#e2, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e2, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th ,
+:is(#e2, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e2, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
+:is(#e3, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e3, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th, :is(#e3, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e3, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
 @media (min-width: 861px) {
-:is(#e2, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
+:is(#e2, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#e2, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
+:is(#e3, #w3) .lp7 .ex .sx-i > .dd-body, :is(#e3, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
 }
-:is(#e2, #w3) .lp7 .ex details.sx .tw table, :is(#e2, #w3) .lp7 .ex details.sx .tw td, :is(#e2, #w3) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
-:is(#e2, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
-:is(#e2, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
-:is(#e2, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
-:is(#e2, #w3) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#e2, #w3) .lp7 .ex details.sx .tw table, :is(#e2, #w3) .lp7 .ex details.sx .tw td, :is(#e2, #w3) .lp7 .ex details.sx .tw th ,
+:is(#e2, #w4) .lp7 .ex details.sx .tw table, :is(#e2, #w4) .lp7 .ex details.sx .tw td, :is(#e2, #w4) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
+:is(#e3, #w3) .lp7 .ex details.sx .tw table, :is(#e3, #w3) .lp7 .ex details.sx .tw td, :is(#e3, #w3) .lp7 .ex details.sx .tw th, :is(#e3, #w4) .lp7 .ex details.sx .tw table, :is(#e3, #w4) .lp7 .ex details.sx .tw td, :is(#e3, #w4) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
+:is(#e2, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td ,
+:is(#e2, #w4) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
+:is(#e3, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td, :is(#e3, #w4) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx > summary .sx-do p ,
+:is(#e2, #w4) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#e3, #w3) .lp7 .ex > details.sx > summary .sx-do p, :is(#e3, #w4) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#e2, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) ,
+:is(#e2, #w4) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#e3, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *), :is(#e3, #w4) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#e2, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) ,
+:is(#e2, #w4) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
+:is(#e3, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *), :is(#e3, #w4) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
+:is(#e2, #w3) .lp7 .ex details.sx .sx-do .neg ,
+:is(#e2, #w4) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#e3, #w3) .lp7 .ex details.sx .sx-do .neg, :is(#e3, #w4) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 #e2 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
+#e3 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
 #e2 .lp7 .ex .tw td { vertical-align: top; }
+#e3 .lp7 .ex .tw td { vertical-align: top; }
 #e2 .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+#e3 .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
 #e2 .lp7 .ex .tw.scan td.scan-l a:hover { text-decoration-thickness: 2px; }
+#e3 .lp7 .ex .tw.scan td.scan-l a:hover { text-decoration-thickness: 2px; }
 #e2 .lp7 .ex .tw.scan td:first-child { width: 34%; }
+#e3 .lp7 .ex .tw.scan td:first-child { width: 34%; }
 #e2 .lp7 .ex .tw.scan td strong { font-weight: 700; }
+#e3 .lp7 .ex .tw.scan td strong { font-weight: 700; }
 #e2 .lp7 .ex .tw.scan td:first-child { width: auto; }
+#e3 .lp7 .ex .tw.scan td:first-child { width: auto; }
 #e2 .lp7 .ex .tw.c1 td:first-child, #e2 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 0 !important; }
+#e3 .lp7 .ex .tw.c1 td:first-child, #e3 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 0 !important; }
 #e2 .lp7 .ex .tw.c1 td:first-child, #e2 .lp7 .ex .tw.c2 td:nth-child(-n+2) { padding-top: 11px !important; }
+#e3 .lp7 .ex .tw.c1 td:first-child, #e3 .lp7 .ex .tw.c2 td:nth-child(-n+2) { padding-top: 11px !important; }
 #e2 .lp7 .ex details.sx .tw td { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+#e3 .lp7 .ex details.sx .tw td { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
 #e2 .lp7 .ex .tw.c1 td:first-child, #e2 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; padding-top: 9px !important; }
+#e3 .lp7 .ex .tw.c1 td:first-child, #e3 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; padding-top: 9px !important; }
 @media (min-width: 861px) {
 #e2 .lp7 .ex .tw.c1 table, #e2 .lp7 .ex .tw.c2 table { table-layout: fixed; width: 100%; }
+#e3 .lp7 .ex .tw.c1 table, #e3 .lp7 .ex .tw.c2 table { table-layout: fixed; width: 100%; }
 #e2 .lp7 .ex .tw.c1 :is(td, th) { box-sizing: border-box; }
+#e3 .lp7 .ex .tw.c1 :is(td, th) { box-sizing: border-box; }
 #e2 .lp7 .ex .tw.c2 :is(td, th) { box-sizing: border-box; }
+#e3 .lp7 .ex .tw.c2 :is(td, th) { box-sizing: border-box; }
 #e2 .lp7 .ex .tw.c1 tr > :first-child { width: 410px; }
+#e3 .lp7 .ex .tw.c1 tr > :first-child { width: 410px; }
 #e2 .lp7 .ex .tw.c2 tr > :nth-child(1) { width: 150px; }
+#e3 .lp7 .ex .tw.c2 tr > :nth-child(1) { width: 150px; }
 #e2 .lp7 .ex .tw.c2 tr > :nth-child(2) { width: 260px; padding-right: 24px; }
+#e3 .lp7 .ex .tw.c2 tr > :nth-child(2) { width: 260px; padding-right: 24px; }
 }
 #e2 .lp7 .ex .tw.c1 td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: clamp(14px, 1.15vw, 16px) !important; line-height: 1.24 !important; letter-spacing: 0 !important; padding-right: 24px !important; }
+#e3 .lp7 .ex .tw.c1 td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: clamp(14px, 1.15vw, 16px) !important; line-height: 1.24 !important; letter-spacing: 0 !important; padding-right: 24px !important; }
 #e2 .lp7 .ex .tw.c1 td:first-child .k { display: block; font-weight: 700; }
+#e3 .lp7 .ex .tw.c1 td:first-child .k { display: block; font-weight: 700; }
 #e2 .lp7 .ex .tw.c1 td:first-child .d { display: block; font-weight: 400; }
+#e3 .lp7 .ex .tw.c1 td:first-child .d { display: block; font-weight: 400; }
 #e2 .lp7 .ex .tw.terr td:nth-child(2), #e2 .lp7 .ex .tw.terr th:nth-child(2) { padding-right: 24px !important; }
+#e3 .lp7 .ex .tw.terr td:nth-child(2), #e3 .lp7 .ex .tw.terr th:nth-child(2) { padding-right: 24px !important; }
 @media (max-width: 860px) {
 #e2 .lp7 .ex .tw.terr :is(table, tbody) { display: block; width: 100% !important; min-width: 0 !important; }
+#e3 .lp7 .ex .tw.terr :is(table, tbody) { display: block; width: 100% !important; min-width: 0 !important; }
 #e2 .lp7 .ex .tw.terr tr:first-child { display: none; }
+#e3 .lp7 .ex .tw.terr tr:first-child { display: none; }
 #e2 .lp7 .ex .tw.terr tr { display: block; border-top: 1px solid #C8C8C8; padding: 10px 0 12px; }
+#e3 .lp7 .ex .tw.terr tr { display: block; border-top: 1px solid #C8C8C8; padding: 10px 0 12px; }
 #e2 .lp7 .ex .tw.terr td { display: block; width: auto !important; white-space: normal !important; border: 0 !important; padding: 0 0 6px !important; }
+#e3 .lp7 .ex .tw.terr td { display: block; width: auto !important; white-space: normal !important; border: 0 !important; padding: 0 0 6px !important; }
 #e2 .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene: '; font-family: var(--sans); font-weight: 700; }
+#e3 .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene: '; font-family: var(--sans); font-weight: 700; }
 }
 #e2 .lp7 .ex > details.sx > summary h5::before { content: "(W2)1." counter(exn); }
-:is(#e2, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+#e3 .lp7 .ex > details.sx > summary h5::before { content: "(W2)1." counter(exn); }
+:is(#e2, #w3) .lp7 .ex > details.sx > summary h5 ,
+:is(#e2, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx > summary h5, :is(#e3, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary ,
+:is(#e2, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary, :is(#e3, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
 @media (max-width: 860px) {
-:is(#e2, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
-:is(#e2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx > summary h5 ,
+:is(#e2, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx > summary h5, :is(#e3, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary ,
+:is(#e2, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary, :is(#e3, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#e2, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before ,
+:is(#e2, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
+:is(#e3, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before, :is(#e3, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
 }
-:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
+:is(#e2, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after ,
+:is(#e2, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
+:is(#e3, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after, :is(#e3, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
 #e2 .lp7 .ex > details.sx > summary h5::before { content: "(E2)" counter(exn); }
+#e3 .lp7 .ex > details.sx > summary h5::before { content: "(E3)" counter(exn); }
 #e2 .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: none; }
+#e3 .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: none; }
 #e2 .lp7 .ex > details.sx > summary h5::before { content: "(W2)E2." counter(exn); }
+#e3 .lp7 .ex > details.sx > summary h5::before { content: "(W3)E3." counter(exn); }
 #e2#e2 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 25px !important; }
+#e3#e3 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 25px !important; }
 #e2#e2 .lp7 .ex > details.sx > summary { grid-template-columns: 22% 28% 50% !important; column-gap: 0 !important; }
+#e3#e3 .lp7 .ex > details.sx > summary { grid-template-columns: 22% 28% 50% !important; column-gap: 0 !important; }
 #e2#e2 .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: 50% 50% !important; column-gap: 0 !important; }
+#e3#e3 .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: 50% 50% !important; column-gap: 0 !important; }
 #e2#e2 .lp7 .ex > details.sx:last-of-type, #e2#e2 .lp7 .ex > details.sx:last-of-type > summary, #e2#e2 .lp7 .ex > details.sx:last-of-type .sx-p { border-bottom: 0 !important; }
+#e3#e3 .lp7 .ex > details.sx:last-of-type, #e3#e3 .lp7 .ex > details.sx:last-of-type > summary, #e3#e3 .lp7 .ex > details.sx:last-of-type .sx-p { border-bottom: 0 !important; }
 
 /* v22-6: P0 — regole della W2 copiate per #w1 (voce delle tre domande) */
 #w1 .lp7 .ba .ex { display: block !important; }
@@ -2466,35 +2800,58 @@ html.exp-on .exp-veil { display: block; }
 #w1 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
 }
 #w1 .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
-:is(#w1, #w3) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx > summary .sx-do ,
+:is(#w1, #w4) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary h5 ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
+:is(#w1, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#w1, #w4) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
 @media (max-width: 860px) {
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
-:is(#w1, #w3) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
+:is(#w1, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#w1, #w4) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
 }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
-:is(#w1, #w3) .lp7 .ex details.sx .st-ex > small { display: none !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
+:is(#w1, #w3) .lp7 .ex details.sx .st-ex > small ,
+:is(#w1, #w4) .lp7 .ex details.sx .st-ex > small { display: none !important; }
 @media (min-width: 861px) {
-:is(#w1, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
+:is(#w1, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#w1, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
 }
-:is(#w1, #w3) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
-:is(#w1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#w1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
+:is(#w1, #w3) .lp7 .ex details.sx .tw tr + tr td ,
+:is(#w1, #w4) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
+:is(#w1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#w1, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th ,
+:is(#w1, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#w1, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
 @media (min-width: 861px) {
-:is(#w1, #w3) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
+:is(#w1, #w3) .lp7 .ex .sx-i > .dd-body ,
+:is(#w1, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
 }
-:is(#w1, #w3) .lp7 .ex details.sx .tw table, :is(#w1, #w3) .lp7 .ex details.sx .tw td, :is(#w1, #w3) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
-:is(#w1, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
-:is(#w1, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
-:is(#w1, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
-:is(#w1, #w3) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#w1, #w3) .lp7 .ex details.sx .tw table, :is(#w1, #w3) .lp7 .ex details.sx .tw td, :is(#w1, #w3) .lp7 .ex details.sx .tw th ,
+:is(#w1, #w4) .lp7 .ex details.sx .tw table, :is(#w1, #w4) .lp7 .ex details.sx .tw td, :is(#w1, #w4) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
+:is(#w1, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td ,
+:is(#w1, #w4) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx > summary .sx-do p ,
+:is(#w1, #w4) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#w1, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) ,
+:is(#w1, #w4) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#w1, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) ,
+:is(#w1, #w4) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
+:is(#w1, #w3) .lp7 .ex details.sx .sx-do .neg ,
+:is(#w1, #w4) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 #w1 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
 #w1 .lp7 .ex .tw td { vertical-align: top; }
 #w1 .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
@@ -2526,19 +2883,26 @@ html.exp-on .exp-veil { display: block; }
 #w1 .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene: '; font-family: var(--sans); font-weight: 700; }
 }
 #w1 .lp7 .ex > details.sx > summary h5::before { content: "(W1)0." counter(exn); }
-:is(#w1, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx > summary h5 ,
+:is(#w1, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary ,
+:is(#w1, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
 @media (max-width: 860px) {
-:is(#w1, #w3) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
-:is(#w1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx > summary h5 ,
+:is(#w1, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary ,
+:is(#w1, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w1, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before ,
+:is(#w1, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
 }
-:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
+:is(#w1, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after ,
+:is(#w1, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
 #w1 .lp7 .ex > details.sx > summary h5::before { content: "(W1)P0." counter(exn); }
 #w1#w1#w1 .card.bv .sino > span { font-family: var(--sans) !important; letter-spacing: 0 !important; font-size: 13px !important; line-height: 1.35 !important; }
 #w1 .lp7 .ex > details.sx > summary h5::before { content: "(W1)P\2006 0." counter(exn); }
-:is(#w1, #w3)#w1#w1 .lp7 .ex > details.sx:last-of-type, :is(#w1, #w3) .lp7 .ex > details.sx:last-of-type > summary { border-bottom: 0 !important; }
-#w1#w1 .lp7 .ex > details.sx:last-of-type, #w3#w3 .lp7 .ex > details.sx:last-of-type { border-bottom: 0 !important; }
+:is(#w1, #w3)#w1#w1 .lp7 .ex > details.sx:last-of-type, :is(#w1, #w3) .lp7 .ex > details.sx:last-of-type > summary ,
+:is(#w1, #w4)#w1#w1 .lp7 .ex > details.sx:last-of-type, :is(#w1, #w4) .lp7 .ex > details.sx:last-of-type > summary { border-bottom: 0 !important; }
+#w1#w1 .lp7 .ex > details.sx:last-of-type, #w3#w3 .lp7 .ex > details.sx:last-of-type , #w4#w4 .lp7 .ex > details.sx:last-of-type { border-bottom: 0 !important; }
 
 #w1 .lp7 .p0-dom > summary { display: none !important; }
 #w1 .lp7 .p0-dom .ex > details.sx > summary .sx-t::after, #w1 .lp7 .p0-dom .ex > details.sx.sx-open > summary .sx-t::after { content: none !important; }
@@ -2594,8 +2958,10 @@ html { color-scheme: light; }
   .lp7 details.ex-dd { margin-left: 0 !important; margin-right: 0 !important; }
   .lp7 details.ex-dd > summary .ex-k { display: none !important; }
   /* voce aperta: numero e titolo della stessa grandezza */
-  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: 26px !important; line-height: 1 !important; margin: 0 0 6px !important; }
-  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary .sx-t { font-size: 26px !important; line-height: 1.05 !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary h5::before ,
+  html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: 26px !important; line-height: 1 !important; margin: 0 0 6px !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary .sx-t ,
+  html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary .sx-t { font-size: 26px !important; line-height: 1.05 !important; }
 }
 
 /* v22-8: altri ritocchi per il telefono */
@@ -2617,9 +2983,12 @@ html { color-scheme: light; }
   html body #w1#w1 .lp7 .p0-rosa .tw tr:first-child { border-top: 0 !important; padding-top: 0 !important; }
   html body #w1#w1 .lp7 .p0-rosa .tw td:first-child { margin-bottom: 4px; }
   /* voci: niente frase di spiegazione (v22-9: corpi di nuovo come in v22-7) */
-  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary .sx-k { display: none !important; }
-  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary { grid-template-columns: max-content minmax(0, 1fr) !important; column-gap: 14px !important; }
-  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: minmax(0, 1fr) !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary .sx-k ,
+  html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary .sx-k { display: none !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary ,
+  html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx > summary { grid-template-columns: max-content minmax(0, 1fr) !important; column-gap: 14px !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary ,
+  html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: minmax(0, 1fr) !important; }
   /* pannelli delle esercitazioni: niente sottotitolo «Fase per fase» */
   .exp .lp7 details.ex-dd > summary .ex-k { display: none !important; }
   /* territorio culturale: ambito e «Da dove viene» stessa grandezza, ognuno sulla sua riga, blocchi più staccati */
@@ -2631,5 +3000,184 @@ html { color-scheme: light; }
 
 /* v22-9: sul telefono niente freccia «>» delle voci (al tocco restava accesa come se il dito fosse sopra) */
 @media (max-width: 860px), (hover: none) {
-  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex .sx-t::before { display: none !important; }
+  html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex .sx-t::before ,
+  html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e3) .lp7 .ex .sx-t::before { display: none !important; }
 }
+
+/* v23-2: 2.2, tabella STEPIC | Forze | Segnali deboli; «Dove» a capo con titoletto come «Senso» */
+#w3 .lp7 .ex .tw.fs td:nth-child(n+2), #w3 .lp7 .ex .tw.fs th:nth-child(n+2) ,
+#w4 .lp7 .ex .tw.fs td:nth-child(n+2), #w4 .lp7 .ex .tw.fs th:nth-child(n+2) { padding-right: 24px !important; }
+#w3#w3 .lp7 .ex .tw.fs .dv ,
+#w4#w4 .lp7 .ex .tw.fs .dv { display: block; margin-top: 18px; font-family: var(--sans) !important; font-size: 13px !important; line-height: 1.35 !important; color: var(--muted); letter-spacing: 0 !important; }
+#w3#w3 .lp7 .ex .tw.fs .dv-l ,
+#w4#w4 .lp7 .ex .tw.fs .dv-l { font-family: var(--sans) !important; font-size: 13px !important; font-weight: 700; color: var(--ink); margin-right: 4px; }
+/* v23-4: «Dove» allineato in basso nella riga */
+@media (min-width: 861px) {
+  #w3 .lp7 .ex .tw.fs td ,
+  #w4 .lp7 .ex .tw.fs td { height: 1px; }
+  #w3 .lp7 .ex .tw.fs td .cl ,
+  #w4 .lp7 .ex .tw.fs td .cl { display: flex; flex-direction: column; height: 100%; }
+  #w3#w3 .lp7 .ex .tw.fs .dv ,
+  #w4#w4 .lp7 .ex .tw.fs .dv { margin-top: auto; padding-top: 18px; }
+}
+/* v23-5: suggerimento 2.2 su griglia, titoli, elenchi ed esempi allineati riga per riga */
+#w3#w3 .lp7 .ex .sx-do .tip2.tip2g ,
+#w4#w4 .lp7 .ex .sx-do .tip2.tip2g { display: flex; flex-direction: column; row-gap: 0; }
+#w3#w3 .lp7 .ex .sx-do .tip2g > .g-hf ,
+#w4#w4 .lp7 .ex .sx-do .tip2g > .g-hf { order: 1; } #w3#w3 .lp7 .ex .sx-do .tip2g > .g-lf , #w4#w4 .lp7 .ex .sx-do .tip2g > .g-lf { order: 2; } #w3#w3 .lp7 .ex .sx-do .tip2g > .g-ef , #w4#w4 .lp7 .ex .sx-do .tip2g > .g-ef { order: 3; margin-bottom: 16px !important; }
+#w3#w3 .lp7 .ex .sx-do .tip2g > .g-hs ,
+#w4#w4 .lp7 .ex .sx-do .tip2g > .g-hs { order: 4; } #w3#w3 .lp7 .ex .sx-do .tip2g > .g-ls , #w4#w4 .lp7 .ex .sx-do .tip2g > .g-ls { order: 5; } #w3#w3 .lp7 .ex .sx-do .tip2g > .g-es , #w4#w4 .lp7 .ex .sx-do .tip2g > .g-es { order: 6; }
+#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip2g > :is(.g-hf, .g-hs) ,
+#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip2g > :is(.g-hf, .g-hs) { margin-bottom: 0 !important; }
+@media (min-width: 861px) {
+  #w3#w3 .lp7 .ex .sx-do .tip2.tip2g ,
+  #w4#w4 .lp7 .ex .sx-do .tip2.tip2g { display: grid; grid-template-columns: 50% 1fr; column-gap: 0; }
+  #w3#w3 .lp7 .ex .sx-do .tip2g > * ,
+  #w4#w4 .lp7 .ex .sx-do .tip2g > * { order: 0 !important; }
+  #w3#w3 .lp7 .ex .sx-do .tip2g > :is(.g-hf, .g-lf, .g-ef) ,
+  #w4#w4 .lp7 .ex .sx-do .tip2g > :is(.g-hf, .g-lf, .g-ef) { padding-right: 24px; }
+  #w3#w3 .lp7 .ex .sx-do .tip2g > .g-ef ,
+  #w4#w4 .lp7 .ex .sx-do .tip2g > .g-ef { margin-bottom: 0 !important; }
+}
+/* v23-7: fonti della tabella come etichette grigie */
+#w3#w3 .lp7 .ex .tw.fs .dv ,
+#w4#w4 .lp7 .ex .tw.fs .dv { display: flex; flex-wrap: wrap; gap: 4px; color: var(--ink); }
+#w3#w3 .lp7 .ex .tw.fs .dv > span ,
+#w4#w4 .lp7 .ex .tw.fs .dv > span { font-family: var(--sans) !important; font-size: 12px !important; line-height: 1.3 !important; background: var(--pill); padding: 2px 7px; }
+/* v23-8: frase sui dati sotto le due colonne */
+#w3#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p.dati ,
+#w4#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in p.dati { margin-top: 16px !important; }
+/* v23-17: 2.5 Verifica, domande compatte, frase dopo il suggerimento, esempio domande e risposte */
+#w3#w3#w3 .lp7 .ex > details.sx > summary .sx-do ul.q5 li ,
+#w4#w4#w4 .lp7 .ex > details.sx > summary .sx-do ul.q5 li { line-height: 1.25 !important; margin: 0 0 2px !important; }
+#w3#w3#w3 .lp7 .ex > details.sx > summary .sx-do p.dopo-tip ,
+#w4#w4#w4 .lp7 .ex > details.sx > summary .sx-do p.dopo-tip { margin-top: 22px !important; }
+#w3 .lp7 .ex .tw.qa td:first-child ,
+#w4 .lp7 .ex .tw.qa td:first-child { width: 32%; }
+#w3#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tip-coda ,
+#w4#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tip-coda { margin-top: 10px !important; }
+#w3 .lp7 .ex .tw.qa table ,
+#w4 .lp7 .ex .tw.qa table { border-bottom: 0 !important; }
+#w3 .lp7 .ex .tw.qa tr:last-child td ,
+#w4 .lp7 .ex .tw.qa tr:last-child td { border-bottom: 0 !important; }
+/* v23-19: rimandi con iniziale stepic; F nel cerchio nero per le forze; legenda più ariosa */
+.fref { display: inline-flex; align-items: center; justify-content: center; width: 1.38em; height: 1.38em; line-height: 1; border-radius: 50%; background: var(--fg); color: var(--bg); font-family: var(--sans); font-style: normal; font-size: .8em; font-weight: 700; vertical-align: 1px; margin: 0 1px 0 2px; }
+.fref + .ref { margin-left: 1px; }
+#w3 .ref ,
+#w4 .ref { padding: 1px 6px; }
+#w3 .ref[data-tip] ,
+#w4 .ref[data-tip] { position: relative; }
+#w3 .ref[data-tip].tip-on:hover::after, #w3 .ref[data-tip].tip-on:focus-visible::after ,
+#w4 .ref[data-tip].tip-on:hover::after, #w4 .ref[data-tip].tip-on:focus-visible::after { content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%); white-space: nowrap; background: var(--fg); color: var(--bg); font-family: var(--sans); font-size: 11px; font-weight: 600; line-height: 1.2; letter-spacing: 0; padding: 4px 8px; border-radius: 4px; z-index: 50; pointer-events: none; }
+@media (hover: none) { #w3 .ref[data-tip]:hover::after , #w4 .ref[data-tip]:hover::after { content: none; } }
+#w3 .lp7 .ex .tw:has(.ref[data-tip]) ,
+#w4 .lp7 .ex .tw:has(.ref[data-tip]) { overflow: visible !important; }
+#w3#w3 .lp7 .mod-note ,
+#w4#w4 .lp7 .mod-note { line-height: 2.4 !important; }
+/* v23-6: interlinea più stretta nelle due frasi del suggerimento 2.2 */
+#w3#w3#w3 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tl ,
+#w4#w4#w4 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tl { line-height: 1.32 !important; }
+/* v23-1: «causa» e «reazione» in negativo; voci del suggerimento in grassetto */
+#w3#w3 .lp7 .ex details.sx .sx-do .neg ,
+#w4#w4 .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; }
+#w3#w3 .lp7 .ex details.sx .sx-do .tip2 li b ,
+#w4#w4 .lp7 .ex details.sx .sx-do .tip2 li b { font-weight: 700 !important; }
+@media (max-width: 860px) {
+  #w3 .lp7 .ex .tw.fs td:first-child ,
+  #w4 .lp7 .ex .tw.fs td:first-child { font-family: var(--sans) !important; font-weight: 700; }
+  #w3 .lp7 .ex .tw.fs td:nth-child(2)::before ,
+  #w4 .lp7 .ex .tw.fs td:nth-child(2)::before { content: 'Forze'; display: block; font-family: var(--sans); font-weight: 700; margin-top: 6px; }
+  #w3 .lp7 .ex .tw.fs td:nth-child(3)::before ,
+  #w4 .lp7 .ex .tw.fs td:nth-child(3)::before { content: 'Segnali deboli'; display: block; font-family: var(--sans); font-weight: 700; margin-top: 6px; }
+}
+
+/* v24-13: perché del futuro scelto, sotto le tessere */
+#w3#w3#w3 .lp7 .ex p.fut-why { margin-top: 22px !important; max-width: 820px; }
+/* v24-11: futuri, tessere bianche con bordo; finestra senza fondo */
+.fcard.fc-0, .fcard.fc-1, .fcard.fc-2, .fcard.fc-3, .fcard.fc-4 { background: #fff !important; color: var(--ink) !important; box-shadow: none !important; outline: 1px dashed var(--ink) !important; outline-offset: -1px; }
+.m-fut.fc-0, .m-fut.fc-1, .m-fut.fc-2, .m-fut.fc-3, .m-fut.fc-4 { background: transparent !important; color: inherit !important; }
+/* v24-8: esito della verifica */
+#w3#w3#w3 .lp7 .ex p.v-esito { margin: 18px 0 28px !important; }
+/* v24-6: separatore della F nei bollini delle forze, corto e sottile */
+.ref .fsep { display: inline-block; width: 1px; height: .62em; background: currentColor; margin: 0 .32em; vertical-align: .02em; }
+/* v24-1: tessere e pallini delle trend card tutti neri */
+.tc-2, .tc-3 { background: var(--ink) !important; color: #fff !important; box-shadow: none !important; outline: 0 !important; }
+.m-trend.tc-2 .m-head small::before, .m-trend.tc-3 .m-head small::before { background: var(--ink) !important; box-shadow: none !important; }
+
+/* v24-15: W4 numerata per fase, (W4)P 3.1 … 5.2 */
+#w4 .lp7 .ex { counter-reset: exn !important; }
+#w4 .lp7 #f3 .ex > details.sx > summary h5::before { content: "(W4)P\2006 3." counter(exn) !important; }
+#w4 .lp7 #f4 .ex > details.sx > summary h5::before { content: "(W4)P\2006 4." counter(exn) !important; }
+#w4 .lp7 #f5 .ex > details.sx > summary h5::before { content: "(W4)P\2006 5." counter(exn) !important; }
+
+/* v25-6: futuro (tessera tratteggiata) accanto alla tensione; bottone Fonti */
+#w4 .fut-tens { display: grid; grid-template-columns: minmax(0, 230px) minmax(0, 320px); gap: 10px; margin: 24px 0 28px; align-items: stretch; }
+#w4 .fut-tens .tens-box { position: relative; padding: 24px; display: flex; flex-direction: column; gap: 10px; aspect-ratio: 1 / 1; box-sizing: border-box; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cpolyline points='0,1 3,5 6,1 9,5 12,1' fill='none' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") top left / 12px 6px repeat-x, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cpolyline points='0,1 3,5 6,1 9,5 12,1' fill='none' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") bottom left / 12px 6px repeat-x, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 12'%3E%3Cpolyline points='1,0 5,3 1,6 5,9 1,12' fill='none' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") top left / 6px 12px repeat-y, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 12'%3E%3Cpolyline points='1,0 5,3 1,6 5,9 1,12' fill='none' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") top right / 6px 12px repeat-y; }
+#w4#w4#w4 .fut-tens .tens-box small { font-family: var(--sans) !important; font-size: 11px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: .04em; }
+#w4#w4#w4 .fut-tens .tens-box b { font-family: var(--sans) !important; font-size: 24px !important; line-height: 1.1 !important; font-weight: 700 !important; letter-spacing: -.01em; }
+#w4#w4#w4 .fut-tens .tens-box span { margin-top: auto; font-size: 15px !important; line-height: 1.3 !important; }
+#w4 .fonti-open { margin-left: 6px; }
+#w4#w4#w4 .lp7 .ex details.sx .st-ex p.tens-lbl { font-family: var(--sans) !important; font-size: 11px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: .04em !important; line-height: 1.2 !important; margin: 32px 0 8px !important; }
+#w4#w4#w4 .lp7 .ex details.sx .st-ex p.tens-txt { margin-top: 0 !important; }
+#w4 .tens-2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 32px; }
+#w4 .tens-2 > div { padding-right: 24px; }
+#w4#w4#w4 .lp7 .ex details.sx .st-ex .tens-2 p.tens-lbl { margin-top: 0 !important; }
+@media (max-width: 860px) { #w4 .tens-2 { grid-template-columns: minmax(0, 1fr); row-gap: 20px; } }
+#w4#w4#w4 .lp7 .ex .st-ex > .fonti-det { margin-top: 44px !important; }
+#w4#w4#w4 .lp7 .ex .fonti-det[open] > summary { margin-bottom: 0 !important; }
+#w4#w4#w4 .lp7 .ex .fonti-in > p:first-child { margin-top: 10px !important; }
+@media (max-width: 700px) { #w4 .fut-tens { grid-template-columns: minmax(0, 1fr); } #w4 .fut-tens .tens-box { aspect-ratio: auto; } }
+
+/* v26-4 */
+#w4#w4#w4 .lp7 .ex .sx-do .tip2.tip2-1 { grid-template-columns: 1fr; }
+#w4#w4#w4 .lp7 .ex .sx-do .tip2.tip2-1 > div:first-child { padding-right: 0; }
+
+/* v29-4: regole #e3 duplicate da #e2 */
+
+/* v32-2: etichette di gruppo delle voci della W3 */
+#w3 .lp7 .ex > .sx-grp { margin: 0; padding: 30px 0 10px; font-family: "Inter Tight", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; line-height: 1.2; color: #111; }
+
+/* v33-1 */
+#w3 .lp7 .ex > .sx-grp { padding-top: 20px; }
+/* v33-3: box della Selezione */
+#w3 .lp7 .cards.sel4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+@media (max-width: 1100px) { #w3 .lp7 .cards.sel4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+@media (max-width: 600px) { #w3 .lp7 .cards.sel4 { grid-template-columns: minmax(0, 1fr) !important; } }
+#w3 .lp7 .card.sel { position: relative; }
+#w3 .lp7 .card.sel p { margin: 0 0 10px !important; }
+#w3 .lp7 .card.sel .lb { font-weight: 700; color: #111; margin-right: .35em; }
+#w3 .lp7 .card.sel .ct { margin-bottom: 14px !important; }
+#w3 .lp7 .card.sel .x-sc { position: absolute; inset: 0; width: 100%; height: 100%; color: #111; pointer-events: none; }
+
+/* v34: card della Selezione (W3) */
+#w3 .lp7 .sc-intro { margin: 0 0 14px; }
+#w3 .lp7 .fcards.sc4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1100px) { #w3 .lp7 .fcards.sc4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { #w3 .lp7 .fcards.sc4 { grid-template-columns: minmax(0, 1fr); } }
+.fcard.sc { background: #fff; color: var(--ink); outline: 1px solid var(--ink); outline-offset: -1px; min-height: 190px; }
+.fcard.sc small { font-family: var(--mono, "Google Sans Code", monospace); font-weight: 600; font-size: 11px; color: #9A9A9A; }
+html body #w3 .lp7 .ex .st-ex .fcards.sc4 .fcard.sc b { font-family: "Inter Tight", sans-serif !important; font-size: 19px !important; line-height: 1.15 !important; letter-spacing: 0 !important; }
+.fcard.sc span { font-family: var(--mono, "Google Sans Code", monospace); font-size: 13px; }
+.m-sc .m-head small { color: #9A9A9A; }
+
+/* v35-1 */
+#w3 .lp7 .fcards.sc4 { grid-template-columns: repeat(4, minmax(0, 250px)) !important; }
+@media (max-width: 1100px) { #w3 .lp7 .fcards.sc4 { grid-template-columns: repeat(2, minmax(0, 250px)) !important; } }
+@media (max-width: 600px) { #w3 .lp7 .fcards.sc4 { grid-template-columns: minmax(0, 1fr) !important; } }
+.fcard.sc span i { font-style: normal; display: inline-block; width: 1.1em; }
+
+/* v36-1 */
+.fcard.sc em { display: flex; justify-content: space-between; align-items: baseline; }
+.fcard.sc em::after { order: -1; }
+.fcard.sc em .sc-e { font-family: var(--mono, "Google Sans Code", monospace); font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; }
+
+.sig-grid.sc-grid .badge { white-space: nowrap; }
+
+/* v38 */
+#w3 .lp7 .sc-intro.sc-after { margin: 28px 0 0 !important; }
+
+/* v39: testo sotto i casi = nota dell'archivio */
+#w3#w3 .lp7 .sc-mod .mod-note { line-height: 1.45 !important; }
+
+/* v41-10 */
+.gantt .g-ph, .gantt .g-ex { font-size: 12px !important; }
