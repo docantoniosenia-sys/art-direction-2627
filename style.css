@@ -2213,7 +2213,7 @@ dialog.modal .m-note { font-family: var(--sans); font-size: 14px; margin: 10px 0
 .exp.open { transform: none; visibility: visible; transition: transform .5s cubic-bezier(.2,.7,.2,1), visibility 0s; }
 .exp > .lp7 { padding: 0 20px 80px; background: transparent; color: var(--fg); }
 .exp .lp7-proj, .exp .lp-col, .exp .lp-inner { display: block; width: auto; max-width: none; height: auto; overflow: visible; position: static; background: transparent; }
-.exp .exp-x { all: unset; cursor: pointer; position: sticky; top: 0; float: right; width: 38px; height: 38px; margin: 18px 20px 0 0; color: #fff; z-index: 2; }
+.exp .exp-x { all: unset; cursor: pointer; position: relative; top: 0; float: right; width: 38px; height: 38px; margin: 18px 20px 0 0; color: #fff; z-index: 2; }
 .exp .exp-x svg { width: 100%; height: 100%; display: block; }
 .exp .lp-pill { border-color: #fff !important; color: #fff !important; background: transparent !important; }
 .exp .sym { background: #fff !important; }
@@ -3192,144 +3192,546 @@ html body #w3 .lp7 .ex .st-ex .fcards.sc4 .fcard.sc b { font-family: "Inter Tigh
 .qsub { font-weight: inherit; }
 .qa .ln { display: block; padding-left: 1.4em; text-indent: -1.4em; }
 
-/* v43-13: E4 — regole di E3 copiate per #e4 */
-#e4 .lp7 .ba .ex { display: block !important; }
-#e4 .lp7 .ex > details.sub { grid-column: auto !important; margin: 0 !important; }
-#e4 .lp7 .p-body .ex .dd-body:has(> .st-do), #e4 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .dd-body { display: block !important; }
-#e4 .lp7 .ex .st-do { max-width: 832px !important; margin: 0 0 24px !important; }
-#e4 .lp7 .ex .st-do p, #e4 .lp7 .ex .st-do li { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; font-weight: 400 !important; letter-spacing: 0 !important; }
-#e4 .lp7 .ex > details.sub > summary h5::before { content: "3." counter(exn, decimal-leading-zero); }
+/* v43-13: E4 — regole di E3 copiate per :is(#e4,#e5) */
+:is(#e4,#e5) .lp7 .ba .ex { display: block !important; }
+:is(#e4,#e5) .lp7 .ex > details.sub { grid-column: auto !important; margin: 0 !important; }
+:is(#e4,#e5) .lp7 .p-body .ex .dd-body:has(> .st-do), :is(#e4,#e5) .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .dd-body { display: block !important; }
+:is(#e4,#e5) .lp7 .ex .st-do { max-width: 832px !important; margin: 0 0 24px !important; }
+:is(#e4,#e5) .lp7 .ex .st-do p, :is(#e4,#e5) .lp7 .ex .st-do li { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; font-weight: 400 !important; letter-spacing: 0 !important; }
+:is(#e4,#e5) .lp7 .ex > details.sub > summary h5::before { content: "3." counter(exn, decimal-leading-zero); }
 @media (min-width: 861px) {
-#e4 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .fl-ex li { grid-template-columns: 12em minmax(0, 1fr) !important; gap: 12px !important; }
-#e4 .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .vm { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 32px !important; }
-#e4 .lp7 .ex .st-ex .fl-ex, #e4 .lp7 .ex .st-ex .vm, #e4 .lp7 .ex .st-ex > p.quote { max-width: 936px; }
+:is(#e4,#e5) .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .fl-ex li { grid-template-columns: 12em minmax(0, 1fr) !important; gap: 12px !important; }
+:is(#e4,#e5) .lp7 .ba .ex > details.sub:nth-of-type(-n+3) .vm { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 32px !important; }
+:is(#e4,#e5) .lp7 .ex .st-ex .fl-ex, :is(#e4,#e5) .lp7 .ex .st-ex .vm, :is(#e4,#e5) .lp7 .ex .st-ex > p.quote { max-width: 936px; }
 }
-#e4 .lp7 .ex .st-ex > small { display: block !important; margin: 0 0 8px !important; }
-#e4 .lp7 .ex > details.sx { padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--ink) !important; }
-#e4 .lp7 .ex > details.sx:last-of-type { border-bottom: 1px solid var(--ink) !important; }
-#e4 .lp7 .ex > details.sx > summary { display: grid !important; grid-template-columns: 370px minmax(0, 1fr); align-items: baseline; padding: 16px 0 !important; cursor: pointer !important; pointer-events: auto !important; list-style: none; border: 0 !important; }
-#e4 .lp7 .ex > details.sx > summary::-webkit-details-marker { display: none; }
-#e4 .lp7 .ex > details.sx > summary h5 { position: relative; display: grid !important; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; margin: 0 !important; }
-#e4 .lp7 .ex > details.sx > summary h5::before { display: block !important; font-size: clamp(22px, 2vw, 28px) !important; line-height: 1 !important; margin: 0 !important; transition: font-size .3s ease; }
-#e4 .lp7 .ex > details.sx > summary h5::after { content: ">"; position: absolute; left: 130px; margin-left: -1.1em; top: auto; bottom: 0; line-height: 1.2; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
-#e4 .lp7 .ex > details.sx > summary:hover h5::after, #e4 .lp7 .ex > details.sx > summary:focus-visible h5::after { opacity: 1; transform: none; }
-#e4 .lp7 .ex .sx-k { margin: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em; color: var(--ink); }
-#e4 .lp7 .ex > details.sx.sx-open > summary { display: block !important; padding: 20px 0 0 !important; }
-#e4 .lp7 .ex > details.sx.sx-open > summary h5 { display: block !important; }
-#e4 .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: clamp(40px, 4.4vw, 64px) !important; line-height: .9 !important; margin: 0 0 10px !important; }
-#e4 .lp7 .ex > details.sx.sx-open > summary h5::after, #e4 .lp7 .ex > details.sx.sx-open .sx-k { display: none !important; }
-#e4 .lp7 .ex .sx-p { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
-#e4 .lp7 .ex .sx-i { overflow: hidden; min-height: 0; }
-#e4 .lp7 .ex details.sx.sx-open .sx-p { grid-template-rows: 1fr; }
-#e4 .lp7 .ex details.sx:not(.sx-open) .sx-i { visibility: hidden; transition: visibility 0s .45s; }
-#e4 .lp7 .ex .sx-i > .dd-body { padding: 24px 0 40px !important; }
+:is(#e4,#e5) .lp7 .ex .st-ex > small { display: block !important; margin: 0 0 8px !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx { padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--ink) !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx:last-of-type { border-bottom: 1px solid var(--ink) !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary { display: grid !important; grid-template-columns: 370px minmax(0, 1fr); align-items: baseline; padding: 16px 0 !important; cursor: pointer !important; pointer-events: auto !important; list-style: none; border: 0 !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary::-webkit-details-marker { display: none; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5 { position: relative; display: grid !important; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; margin: 0 !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5::before { display: block !important; font-size: clamp(22px, 2vw, 28px) !important; line-height: 1 !important; margin: 0 !important; transition: font-size .3s ease; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5::after { content: ">"; position: absolute; left: 130px; margin-left: -1.1em; top: auto; bottom: 0; line-height: 1.2; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary:hover h5::after, :is(#e4,#e5) .lp7 .ex > details.sx > summary:focus-visible h5::after { opacity: 1; transform: none; }
+:is(#e4,#e5) .lp7 .ex .sx-k { margin: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em; color: var(--ink); }
+:is(#e4,#e5) .lp7 .ex > details.sx.sx-open > summary { display: block !important; padding: 20px 0 0 !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx.sx-open > summary h5 { display: block !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: clamp(40px, 4.4vw, 64px) !important; line-height: .9 !important; margin: 0 0 10px !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx.sx-open > summary h5::after, :is(#e4,#e5) .lp7 .ex > details.sx.sx-open .sx-k { display: none !important; }
+:is(#e4,#e5) .lp7 .ex .sx-p { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+:is(#e4,#e5) .lp7 .ex .sx-i { overflow: hidden; min-height: 0; }
+:is(#e4,#e5) .lp7 .ex details.sx.sx-open .sx-p { grid-template-rows: 1fr; }
+:is(#e4,#e5) .lp7 .ex details.sx:not(.sx-open) .sx-i { visibility: hidden; transition: visibility 0s .45s; }
+:is(#e4,#e5) .lp7 .ex .sx-i > .dd-body { padding: 24px 0 40px !important; }
 @media (max-width: 860px) {
-#e4 .lp7 .ex > details.sx > summary { grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
-#e4 .lp7 .ex > details.sx > summary h5 { grid-template-columns: 72px minmax(0, 1fr); }
-#e4 .lp7 .ex > details.sx > summary h5::after { left: 72px; }
-#e4 .lp7 .ex .sx-k { padding-left: 72px; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary { grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 72px minmax(0, 1fr); }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5::after { left: 72px; }
+:is(#e4,#e5) .lp7 .ex .sx-k { padding-left: 72px; }
 }
-#e4 .lp7 .ex > details.sx { border-top-color: #C8C8C8 !important; }
-#e4 .lp7 .ex > details.sx:last-of-type { border-bottom-color: #C8C8C8 !important; }
-#e4 .lp7 .ex > details.sx > summary h5::after { content: none !important; }
-#e4 .lp7 .ex .sx-t { position: relative; }
-#e4 .lp7 .ex .sx-t::before { content: ">"; position: absolute; right: 100%; margin-right: .5em; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
-#e4 .lp7 .ex > details.sx > summary:hover .sx-t::before, #e4 .lp7 .ex > details.sx > summary:focus-visible .sx-t::before { opacity: 1; transform: none; }
-#e4 .lp7 .ex > details.sx.sx-open .sx-t::before { display: none; }
-#e4 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 130px 280px minmax(0, 1fr); column-gap: 0; align-items: baseline; }
-#e4 .lp7 .ex > details.sx:not(.sx-open) > summary h5 { display: contents !important; }
-#e4 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { grid-column: 1; grid-row: 1; }
-#e4 .lp7 .ex > details.sx:not(.sx-open) .sx-t { grid-column: 2; grid-row: 1; padding-right: 16px; }
-#e4 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 3; grid-row: 1; }
+:is(#e4,#e5) .lp7 .ex > details.sx { border-top-color: #C8C8C8 !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx:last-of-type { border-bottom-color: #C8C8C8 !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5::after { content: none !important; }
+:is(#e4,#e5) .lp7 .ex .sx-t { position: relative; }
+:is(#e4,#e5) .lp7 .ex .sx-t::before { content: ">"; position: absolute; right: 100%; margin-right: .5em; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary:hover .sx-t::before, :is(#e4,#e5) .lp7 .ex > details.sx > summary:focus-visible .sx-t::before { opacity: 1; transform: none; }
+:is(#e4,#e5) .lp7 .ex > details.sx.sx-open .sx-t::before { display: none; }
+:is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 130px 280px minmax(0, 1fr); column-gap: 0; align-items: baseline; }
+:is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) > summary h5 { display: contents !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { grid-column: 1; grid-row: 1; }
+:is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) .sx-t { grid-column: 2; grid-row: 1; padding-right: 16px; }
+:is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 3; grid-row: 1; }
 @media (max-width: 860px) {
-#e4 .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 72px minmax(0, 1fr); row-gap: 6px; }
-#e4 .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
+:is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 72px minmax(0, 1fr); row-gap: 6px; }
+:is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) .sx-k { grid-column: 2; grid-row: 2; padding-left: 0; }
 }
-#e4 .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx > summary .sx-do, :is(#e4, #w4) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary h5, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
-:is(#e4, #w3) .lp7 .ex .sx-i > .dd-body, :is(#e4, #w4) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) > summary { padding: 11px 0 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx > summary .sx-do, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx > summary .sx-do { display: none !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary { display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary h5, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary h5 { grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do p, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do p { margin: 0 0 .6em !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child { margin-bottom: 0 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex .sx-i > .dd-body, :is(:is(#e4,#e5), #w4) .lp7 .ex .sx-i > .dd-body { padding: 40px 0 40px !important; }
 @media (max-width: 860px) {
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
-:is(#e4, #w3) .lp7 .ex .sx-i > .dd-body, :is(#e4, #w4) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary { display: block !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary .sx-do, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary .sx-do { margin-top: 18px !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex .sx-i > .dd-body, :is(:is(#e4,#e5), #w4) .lp7 .ex .sx-i > .dd-body { padding-top: 28px !important; }
 }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
-:is(#e4, #w3) .lp7 .ex details.sx .st-ex > small, :is(#e4, #w4) .lp7 .ex details.sx .st-ex > small { display: none !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 18px !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .st-ex > small, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .st-ex > small { display: none !important; }
 @media (min-width: 861px) {
-:is(#e4, #w3) .lp7 .ex .sx-i > .dd-body, :is(#e4, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex .sx-i > .dd-body, :is(:is(#e4,#e5), #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 410px !important; }
 }
-:is(#e4, #w3) .lp7 .ex details.sx .tw tr + tr td, :is(#e4, #w4) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
-:is(#e4, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e4, #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th, :is(#e4, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(#e4, #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .tw tr + tr td, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .tw tr + tr td { border-top-color: #C8C8C8 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th { border-bottom-color: #C8C8C8 !important; }
 @media (min-width: 861px) {
-:is(#e4, #w3) .lp7 .ex .sx-i > .dd-body, :is(#e4, #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex .sx-i > .dd-body, :is(:is(#e4,#e5), #w4) .lp7 .ex .sx-i > .dd-body { padding-left: 0 !important; }
 }
-:is(#e4, #w3) .lp7 .ex details.sx .tw table, :is(#e4, #w3) .lp7 .ex details.sx .tw td, :is(#e4, #w3) .lp7 .ex details.sx .tw th, :is(#e4, #w4) .lp7 .ex details.sx .tw table, :is(#e4, #w4) .lp7 .ex details.sx .tw td, :is(#e4, #w4) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
-:is(#e4, #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td, :is(#e4, #w4) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx > summary .sx-do p, :is(#e4, #w4) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
-:is(#e4, #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *), :is(#e4, #w4) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
-:is(#e4, #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *), :is(#e4, #w4) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
-:is(#e4, #w3) .lp7 .ex details.sx .sx-do .neg, :is(#e4, #w4) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-#e4 .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
-#e4 .lp7 .ex .tw td { vertical-align: top; }
-#e4 .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
-#e4 .lp7 .ex .tw.scan td.scan-l a:hover { text-decoration-thickness: 2px; }
-#e4 .lp7 .ex .tw.scan td:first-child { width: 34%; }
-#e4 .lp7 .ex .tw.scan td strong { font-weight: 700; }
-#e4 .lp7 .ex .tw.scan td:first-child { width: auto; }
-#e4 .lp7 .ex .tw.c1 td:first-child, #e4 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 0 !important; }
-#e4 .lp7 .ex .tw.c1 td:first-child, #e4 .lp7 .ex .tw.c2 td:nth-child(-n+2) { padding-top: 11px !important; }
-#e4 .lp7 .ex details.sx .tw td { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
-#e4 .lp7 .ex .tw.c1 td:first-child, #e4 .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; padding-top: 9px !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .tw table, :is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .tw td, :is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .tw th, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .tw table, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .tw td, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .tw th { border-color: #C8C8C8 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td { border-bottom: 0 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx > summary .sx-do p, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx > summary .sx-do p { font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *), :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *) { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *), :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *) { font-weight: 400 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary { padding-top: 12.5px !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex details.sx .sx-do .neg, :is(:is(#e4,#e5), #w4) .lp7 .ex details.sx .sx-do .neg { background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#e4,#e5) .lp7 .ex .st-ex > .tw { margin-bottom: 28px !important; }
+:is(#e4,#e5) .lp7 .ex .tw td { vertical-align: top; }
+:is(#e4,#e5) .lp7 .ex .tw.scan td.scan-l a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+:is(#e4,#e5) .lp7 .ex .tw.scan td.scan-l a:hover { text-decoration-thickness: 2px; }
+:is(#e4,#e5) .lp7 .ex .tw.scan td:first-child { width: 34%; }
+:is(#e4,#e5) .lp7 .ex .tw.scan td strong { font-weight: 700; }
+:is(#e4,#e5) .lp7 .ex .tw.scan td:first-child { width: auto; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 td:first-child, :is(#e4,#e5) .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 0 !important; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 td:first-child, :is(#e4,#e5) .lp7 .ex .tw.c2 td:nth-child(-n+2) { padding-top: 11px !important; }
+:is(#e4,#e5) .lp7 .ex details.sx .tw td { font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 td:first-child, :is(#e4,#e5) .lp7 .ex .tw.c2 td:nth-child(-n+2) { font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; padding-top: 9px !important; }
 @media (min-width: 861px) {
-#e4 .lp7 .ex .tw.c1 table, #e4 .lp7 .ex .tw.c2 table { table-layout: fixed; width: 100%; }
-#e4 .lp7 .ex .tw.c1 :is(td, th) { box-sizing: border-box; }
-#e4 .lp7 .ex .tw.c2 :is(td, th) { box-sizing: border-box; }
-#e4 .lp7 .ex .tw.c1 tr > :first-child { width: 410px; }
-#e4 .lp7 .ex .tw.c2 tr > :nth-child(1) { width: 150px; }
-#e4 .lp7 .ex .tw.c2 tr > :nth-child(2) { width: 260px; padding-right: 24px; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 table, :is(#e4,#e5) .lp7 .ex .tw.c2 table { table-layout: fixed; width: 100%; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 :is(td, th) { box-sizing: border-box; }
+:is(#e4,#e5) .lp7 .ex .tw.c2 :is(td, th) { box-sizing: border-box; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 tr > :first-child { width: 410px; }
+:is(#e4,#e5) .lp7 .ex .tw.c2 tr > :nth-child(1) { width: 150px; }
+:is(#e4,#e5) .lp7 .ex .tw.c2 tr > :nth-child(2) { width: 260px; padding-right: 24px; }
 }
-#e4 .lp7 .ex .tw.c1 td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: clamp(14px, 1.15vw, 16px) !important; line-height: 1.24 !important; letter-spacing: 0 !important; padding-right: 24px !important; }
-#e4 .lp7 .ex .tw.c1 td:first-child .k { display: block; font-weight: 700; }
-#e4 .lp7 .ex .tw.c1 td:first-child .d { display: block; font-weight: 400; }
-#e4 .lp7 .ex .tw.terr td:nth-child(2), #e4 .lp7 .ex .tw.terr th:nth-child(2) { padding-right: 24px !important; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 td:first-child { font-family: var(--sans) !important; font-weight: 700 !important; font-size: clamp(14px, 1.15vw, 16px) !important; line-height: 1.24 !important; letter-spacing: 0 !important; padding-right: 24px !important; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 td:first-child .k { display: block; font-weight: 700; }
+:is(#e4,#e5) .lp7 .ex .tw.c1 td:first-child .d { display: block; font-weight: 400; }
+:is(#e4,#e5) .lp7 .ex .tw.terr td:nth-child(2), :is(#e4,#e5) .lp7 .ex .tw.terr th:nth-child(2) { padding-right: 24px !important; }
 @media (max-width: 860px) {
-#e4 .lp7 .ex .tw.terr :is(table, tbody) { display: block; width: 100% !important; min-width: 0 !important; }
-#e4 .lp7 .ex .tw.terr tr:first-child { display: none; }
-#e4 .lp7 .ex .tw.terr tr { display: block; border-top: 1px solid #C8C8C8; padding: 10px 0 12px; }
-#e4 .lp7 .ex .tw.terr td { display: block; width: auto !important; white-space: normal !important; border: 0 !important; padding: 0 0 6px !important; }
-#e4 .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene: '; font-family: var(--sans); font-weight: 700; }
+:is(#e4,#e5) .lp7 .ex .tw.terr :is(table, tbody) { display: block; width: 100% !important; min-width: 0 !important; }
+:is(#e4,#e5) .lp7 .ex .tw.terr tr:first-child { display: none; }
+:is(#e4,#e5) .lp7 .ex .tw.terr tr { display: block; border-top: 1px solid #C8C8C8; padding: 10px 0 12px; }
+:is(#e4,#e5) .lp7 .ex .tw.terr td { display: block; width: auto !important; white-space: normal !important; border: 0 !important; padding: 0 0 6px !important; }
+:is(#e4,#e5) .lp7 .ex .tw.terr td:nth-child(3)::before { content: 'Da dove viene: '; font-family: var(--sans); font-weight: 700; }
 }
-#e4 .lp7 .ex > details.sx > summary h5::before { content: "(W2)1." counter(exn); }
-:is(#e4, #w3) .lp7 .ex > details.sx > summary h5, :is(#e4, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary, :is(#e4, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5::before { content: "(W2)1." counter(exn); }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx > summary h5, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx:not(.sx-open) > summary, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
 @media (max-width: 860px) {
-:is(#e4, #w3) .lp7 .ex > details.sx > summary h5, :is(#e4, #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary, :is(#e4, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
-:is(#e4, #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before, :is(#e4, #w4) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx > summary h5, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx > summary h5 { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx:not(.sx-open) > summary, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx:not(.sx-open) > summary { grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 20px !important; }
 }
-:is(#e4, #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after, :is(#e4, #w4) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
-#e4 .lp7 .ex > details.sx > summary h5::before { content: "(E4)" counter(exn); }
-#e4 .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: none; }
-#e4 .lp7 .ex > details.sx > summary h5::before { content: "(W4)E4." counter(exn); }
-#e4#e4 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 25px !important; }
-#e4#e4 .lp7 .ex > details.sx > summary { grid-template-columns: 22% 28% 50% !important; column-gap: 0 !important; }
-#e4#e4 .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: 50% 50% !important; column-gap: 0 !important; }
-#e4#e4 .lp7 .ex > details.sx:last-of-type, #e4#e4 .lp7 .ex > details.sx:last-of-type > summary, #e4#e4 .lp7 .ex > details.sx:last-of-type .sx-p { border-bottom: 0 !important; }
+:is(:is(#e4,#e5), #w3) .lp7 .ex > details.sx.sx-open > summary .sx-t::after, :is(:is(#e4,#e5), #w4) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: " IKEA"; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5::before { content: "(E4)" counter(exn); }
+:is(#e4,#e5) .lp7 .ex > details.sx.sx-open > summary .sx-t::after { content: none; }
+:is(#e4,#e5) .lp7 .ex > details.sx > summary h5::before { content: "(W4)E4." counter(exn); }
+:is(#e4,#e5):is(#e4,#e5) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before { font-size: 25px !important; }
+:is(#e4,#e5):is(#e4,#e5) .lp7 .ex > details.sx > summary { grid-template-columns: 22% 28% 50% !important; column-gap: 0 !important; }
+:is(#e4,#e5):is(#e4,#e5) .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: 50% 50% !important; column-gap: 0 !important; }
+:is(#e4,#e5):is(#e4,#e5) .lp7 .ex > details.sx:last-of-type, :is(#e4,#e5):is(#e4,#e5) .lp7 .ex > details.sx:last-of-type > summary, :is(#e4,#e5):is(#e4,#e5) .lp7 .ex > details.sx:last-of-type .sx-p { border-bottom: 0 !important; }
 @media (max-width: 860px) {
-html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx.sx-open > summary h5::before, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: 26px !important; line-height: 1 !important; margin: 0 0 6px !important; }
-html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx.sx-open > summary .sx-t, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx.sx-open > summary .sx-t { font-size: 26px !important; line-height: 1.05 !important; }
+html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx.sx-open > summary h5::before, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx.sx-open > summary h5::before { font-size: 26px !important; line-height: 1 !important; margin: 0 0 6px !important; }
+html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx.sx-open > summary .sx-t, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx.sx-open > summary .sx-t { font-size: 26px !important; line-height: 1.05 !important; }
 }
 @media (max-width: 860px) {
-html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx > summary .sx-k, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx > summary .sx-k { display: none !important; }
-html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx > summary, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx > summary { grid-template-columns: max-content minmax(0, 1fr) !important; column-gap: 14px !important; }
-html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx.sx-open > summary, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: minmax(0, 1fr) !important; }
+html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx > summary .sx-k, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx > summary .sx-k { display: none !important; }
+html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx > summary, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx > summary { grid-template-columns: max-content minmax(0, 1fr) !important; column-gap: 14px !important; }
+html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx.sx-open > summary, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex > details.sx.sx-open > summary { grid-template-columns: minmax(0, 1fr) !important; }
 }
 @media (max-width: 860px), (hover: none) {
-html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex .sx-t::before, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,#e4) .lp7 .ex .sx-t::before { display: none !important; }
+html body :is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w3,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex .sx-t::before, html body :is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)):is(#w1,#w2,#w4,#w4,#w5,#w6,#w7,#w8,#w9,#w10,#e1,#e2,:is(#e4,#e5)) .lp7 .ex .sx-t::before { display: none !important; }
 }
+
+/* v48: stili dei passi della W4 estesi alla W5 (P4 Strategy) */
+#w5 .lp7 .ex > details.sx{ padding: 0 !important; margin: 0 !important; border-top: 1px solid var(--ink) !important; }
+#w5 .lp7 .ex > details.sx:last-of-type{ border-bottom: 1px solid var(--ink) !important; }
+#w5 .lp7 .ex > details.sx > summary{ display: grid !important; grid-template-columns: 370px minmax(0, 1fr); align-items: baseline; padding: 16px 0 !important; cursor: pointer !important; pointer-events: auto !important; list-style: none; border: 0 !important; }
+#w5 .lp7 .ex > details.sx > summary::-webkit-details-marker{ display: none; }
+#w5 .lp7 .ex > details.sx > summary h5{ position: relative; display: grid !important; grid-template-columns: 130px minmax(0, 1fr); align-items: baseline; margin: 0 !important; }
+#w5 .lp7 .ex > details.sx > summary h5::before{ display: block !important; font-size: clamp(22px, 2vw, 28px) !important; line-height: 1 !important; margin: 0 !important; transition: font-size .3s ease; }
+#w5 .lp7 .ex > details.sx > summary h5::after{ content: ">"; position: absolute; left: 130px; margin-left: -1.1em; top: auto; bottom: 0; line-height: 1.2; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+#w5 .lp7 .ex > details.sx > summary:hover h5::after,#w5 .lp7 .ex > details.sx > summary:focus-visible h5::after{ opacity: 1; transform: none; }
+#w5 .lp7 .ex .sx-k{ margin: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em; color: var(--ink); }
+#w5 .lp7 .ex > details.sx.sx-open > summary{ display: block !important; padding: 20px 0 0 !important; }
+#w5 .lp7 .ex > details.sx.sx-open > summary h5{ display: block !important; }
+#w5 .lp7 .ex > details.sx.sx-open > summary h5::before{ font-size: clamp(40px, 4.4vw, 64px) !important; line-height: .9 !important; margin: 0 0 10px !important; }
+#w5 .lp7 .ex > details.sx.sx-open > summary h5::after,#w5 .lp7 .ex > details.sx.sx-open .sx-k{ display: none !important; }
+#w5 .lp7 .ex .sx-p{ display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+#w5 .lp7 .ex .sx-i{ overflow: hidden; min-height: 0; }
+#w5 .lp7 .ex details.sx.sx-open .sx-p{ grid-template-rows: 1fr; }
+#w5 .lp7 .ex details.sx:not(.sx-open) .sx-i{ visibility: hidden; transition: visibility 0s .45s; }
+#w5 .lp7 .ex .sx-i > .dd-body{ padding: 24px 0 40px !important; }
+@media (max-width: 860px){#w5 .lp7 .ex > details.sx > summary{ grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
+#w5 .lp7 .ex > details.sx > summary h5{ grid-template-columns: 72px minmax(0, 1fr); }
+#w5 .lp7 .ex > details.sx > summary h5::after{ left: 72px; }
+#w5 .lp7 .ex .sx-k{ padding-left: 72px; }}
+#w5 .lp7 .ex > details.sx{ border-top-color: #C8C8C8 !important; }
+#w5 .lp7 .ex > details.sx:last-of-type{ border-bottom-color: #C8C8C8 !important; }
+#w5 .lp7 .ex > details.sx > summary h5::after{ content: none !important; }
+#w5 .lp7 .ex .sx-t{ position: relative; }
+#w5 .lp7 .ex .sx-t::before{ content: ">"; position: absolute; right: 100%; margin-right: .5em; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; }
+#w5 .lp7 .ex > details.sx > summary:hover .sx-t::before,#w5 .lp7 .ex > details.sx > summary:focus-visible .sx-t::before{ opacity: 1; transform: none; }
+#w5 .lp7 .ex > details.sx.sx-open .sx-t::before{ display: none; }
+#w5 .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 130px 280px minmax(0, 1fr); column-gap: 0; align-items: baseline; }
+#w5 .lp7 .ex > details.sx:not(.sx-open) > summary h5{ display: contents !important; }
+#w5 .lp7 .ex > details.sx:not(.sx-open) > summary h5::before{ grid-column: 1; grid-row: 1; }
+#w5 .lp7 .ex > details.sx:not(.sx-open) .sx-t{ grid-column: 2; grid-row: 1; padding-right: 16px; }
+#w5 .lp7 .ex > details.sx:not(.sx-open) .sx-k{ grid-column: 3; grid-row: 1; }
+@media (max-width: 860px){#w5 .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 72px minmax(0, 1fr); row-gap: 6px; }
+#w5 .lp7 .ex > details.sx:not(.sx-open) .sx-k{ grid-column: 2; grid-row: 2; padding-left: 0; }}
+#w5 .lp7 .ex > details.sx:not(.sx-open) > summary{ padding: 11px 0 !important; }
+#w5 .lp7 .ex > details.sub{ grid-column: auto !important; margin: 0 !important; }
+#w5 .lp7{ counter-reset: exn; }
+#w5 .lp7 .ex{ counter-reset: none; }
+#w5 .lp7 .ex > details.sub > summary h5::before{ content: "3." counter(exn, decimal-leading-zero); }
+#w5 .lp7 .ex .st-ex > small{ display: block !important; margin: 0 0 8px !important; font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+#w5 .lp7 .ex .st-ex > p:not(.quote),#w5 .lp7 .ex .st-ex > ul li{ font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.32 !important; letter-spacing: 0 !important; }
+#w5 .lp7 .ex .st-ex > p,#w5 .lp7 .ex .st-ex > ul{ margin: 0 0 .8em !important; }
+#w5 .lp7 .ex .st-ex > p.quote,#w5 .lp7 .ex .st-ex > p,#w5 .lp7 .ex .st-ex > ul{ max-width: 936px; }
+#w5 .lp7 .ex .st-do p{ font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; font-weight: 400 !important; letter-spacing: 0 !important; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do{ display: none !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary h5{ grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do p{ margin: 0 0 .6em !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child{ margin-bottom: 0 !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding: 40px 0 40px !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: block !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ margin-top: 18px !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-top: 28px !important; }}
+#w5 .lp7 .ex .st-ex > .tw{ margin-bottom: 28px !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 18px !important; }
+#w5 .lp7 .ex .tw td{ vertical-align: top; }
+#w5 .lp7 .ex .tw.scan td.scan-l a{ color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+#w5 .lp7 .ex .tw.scan td.scan-l a:hover{ text-decoration-thickness: 2px; }
+#w5 .lp7 .ex .st-ex > p:has(> strong:first-child){ margin-top: 8px !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > small{ display: none !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 410px !important; }}
+:is(#w5) .lp7 .ex details.sx .tw tr + tr td{ border-top-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td,:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th{ border-bottom-color: #C8C8C8 !important; }
+#w5 .lp7 .ex .tw.scan td:first-child{ width: 34%; }
+#w5 .lp7 .ex .tw.scan td strong{ font-weight: 700; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 0 !important; }}
+#w5 .lp7 .ex .tw.scan td:first-child{ width: auto; }
+#w5 .lp7 .ex .tw.c1 td:first-child,#w5 .lp7 .ex .tw.c2 td:nth-child(-n+2){ font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; letter-spacing: 0 !important; }
+:is(#w5) .lp7 .ex details.sx .tw table,:is(#w5) .lp7 .ex details.sx .tw td,:is(#w5) .lp7 .ex details.sx .tw th{ border-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td{ border-bottom: 0 !important; }
+#w5 .lp7 .ex .tw.c1 td:first-child,#w5 .lp7 .ex .tw.c2 td:nth-child(-n+2){ padding-top: 11px !important; }
+#w5 .lp7 .ex details.sx .tw td{ font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+#w5 .lp7 .ex .tw.c1 td:first-child,#w5 .lp7 .ex .tw.c2 td:nth-child(-n+2){ font-family: var(--sans) !important; font-size: 16px !important; line-height: 1.3 !important; padding-top: 9px !important; }
+@media (min-width: 861px){#w5 .lp7 .ex .tw.c1 table,#w5 .lp7 .ex .tw.c2 table{ table-layout: fixed; width: 100%; }
+#w5 .lp7 .ex .tw.c1 :is(td, th){ box-sizing: border-box; }
+#w5 .lp7 .ex .tw.c2 :is(td, th){ box-sizing: border-box; }
+#w5 .lp7 .ex .tw.c1 tr > :first-child{ width: 410px; }
+#w5 .lp7 .ex .tw.c2 tr > :nth-child(1){ width: 150px; }
+#w5 .lp7 .ex .tw.c2 tr > :nth-child(2){ width: 260px; padding-right: 24px; }}
+#w5 .lp7 .ex .tw.c1 td:first-child{ font-family: var(--sans) !important; font-weight: 700 !important; font-size: clamp(14px, 1.15vw, 16px) !important; line-height: 1.24 !important; letter-spacing: 0 !important; padding-right: 24px !important; }
+#w5 .lp7 .ex .tw.c1 td:first-child .k{ display: block; font-weight: 700; }
+#w5 .lp7 .ex .tw.c1 td:first-child .d{ display: block; font-weight: 400; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do p{ font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *){ font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *){ font-weight: 400 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 12.5px !important; }
+#w5#w5 .lp7 .ex details.sx.sx .st-ex > p > strong:only-child{ display: inline-block; font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: 0 !important; background: var(--ink); color: #fff; padding: 3px 7px 4px; }
+:is(#w5) .lp7 .ex details.sx .sx-do .neg{ background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+#w5 .lp7 .ex > details.sx > summary h5::before{ content: "(W3)2." counter(exn); }
+:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before{ font-size: 20px !important; }}
+#w5 .lp7 .ex .tw.terr td:nth-child(2),#w5 .lp7 .ex .tw.terr th:nth-child(2){ padding-right: 24px !important; }
+@media (max-width: 860px){#w5 .lp7 .ex .tw.terr :is(table, tbody){ display: block; width: 100% !important; min-width: 0 !important; }
+#w5 .lp7 .ex .tw.terr tr:first-child{ display: none; }
+#w5 .lp7 .ex .tw.terr tr{ display: block; border-top: 1px solid #C8C8C8; padding: 10px 0 12px; }
+#w5 .lp7 .ex .tw.terr td{ display: block; width: auto !important; white-space: normal !important; border: 0 !important; padding: 0 0 6px !important; }}
+#w5 .lp7 .ex .st-ex > p.quote{ margin: 0 0 22px !important; }
+#w5 .lp7 .ex .sx-do p b{ font-weight: 700; }
+@media (min-width: 861px){#w5 .lp7 .ex .tw.scan4 td:nth-child(n+2),#w5 .lp7 .ex .tw.scan4 th:nth-child(n+2){ padding-right: 20px !important; }}
+#w5 .lp7 .ex .fonti-det{ margin: 6px 0 0; border-top: 0; }
+#w5 .lp7 .ex .fonti-det > summary{ display: inline-flex; gap: 10px; padding: 6px 0; }
+#w5#w5 .lp7 .ex details.sx.sx .st-ex .fonti-in > p > strong:only-child{ display: inline-block; font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: 0 !important; background: var(--ink); color: #fff; padding: 3px 7px 4px; }
+#w5 .lp7 .ex .fonti-in > p{ margin: 22px 0 8px !important; }
+#w5#w5 .lp7 .ex details.sx.sx .st-ex .fonti-det > summary span{ font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: .04em !important; }
+#w5 .lp7 .ex .fonti-det > summary i{ width: 12px; height: 12px; }
+#w5 .lp7 .ex .fonti-det > summary i::before,#w5 .lp7 .ex .fonti-det > summary i::after{ top: 5.5px; }
+#w5 .lp7 .ex .fonti-det[open] > summary{ margin-bottom: 14px; }
+#w5 .lp7 .ex details.sx .st-ex .lv3 :is(span, b, i, small){ letter-spacing: 0 !important; }
+#w5 .lp7 .ex details.sx .st-ex .lv3 .lv b{ font-family: var(--sans) !important; font-weight: 700 !important; font-size: 17px !important; }
+#w5 .lp7 .ex details.sx .st-ex .lv3 .lv span{ font-weight: 400 !important; }
+#w5 .lp7 .ex details.sx .st-ex .lv3 .lv i{ font-family: var(--sans) !important; font-weight: 700 !important; font-size: 14px !important; }
+#w5 .lp7 .ex details.sx .st-ex .lv3 small,#w5 .lp7 .ex details.sx .st-ex .lv3 small em{ font-family: var(--sans) !important; font-size: 12px !important; font-weight: 400 !important; }
+#w5 .lp7 .ex .fonti-in .val-intro{ margin: 0 0 12px !important; }
+#w5 .lp7 .ex .sx-do .tip{ margin: 14px 0 0; }
+#w5 .lp7 .ex .sx-do .tip-b{ display: inline-flex; align-items: center; gap: 10px; padding: 6px 0; border: 0; background: none; cursor: pointer; font-family: var(--sans); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); }
+#w5 .lp7 .ex .sx-do .tip-b i{ position: relative; width: 12px; height: 12px; }
+#w5 .lp7 .ex .sx-do .tip-b i::before,#w5 .lp7 .ex .sx-do .tip-b i::after{ content: ""; position: absolute; left: 0; top: 5px; width: 12px; height: 2px; background: currentColor; transition: transform .2s; }
+#w5 .lp7 .ex .sx-do .tip-b i::after{ transform: rotate(90deg); }
+#w5 .lp7 .ex .sx-do .tip.open .tip-b i::after{ transform: rotate(0deg); }
+#w5 .lp7 .ex .sx-do .tip-in{ display: none; margin-top: 8px; padding: 14px 16px; border: 1px solid var(--ink); }
+#w5 .lp7 .ex .sx-do .tip.open .tip-in{ display: block; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in p{ font-size: 15px !important; font-weight: 400 !important; line-height: 1.4 !important; letter-spacing: 0 !important; }
+#w5 .lp7 .ex .sx-do :is(ul.arr, ul.chk){ list-style: none; margin: 0 0 .6em; padding: 0; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do :is(ul.arr, ul.chk) li{ position: relative; padding: 0 0 0 28px !important; margin: 0 0 .3em !important; border: 0 !important; font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+#w5 .lp7 .ex .sx-do :is(ul.arr, ul.chk) li b{ font-weight: 700; }
+#w5 .lp7 .ex .sx-do ul.arr li::before{ content: "→"; position: absolute; left: 0; top: 0; font-weight: 700; }
+#w5 .lp7 .ex .sx-do ul.chk li::before{ content: ""; position: absolute; left: 3px; top: .18em; width: 6px; height: 12px; border: solid var(--ink); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+#w5 .lp7 .ex .sx-do .tip-in{ padding: 16px 18px; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in p:last-child{ margin-bottom: 0 !important; }
+#w5 .lp7 .ex .val2 tr.vgrp td{ font-family: var(--sans); font-weight: 700; padding-top: 14px; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in :is(ul.arr, ul.chk) li{ font-size: 15px !important; font-weight: 400 !important; line-height: 1.4 !important; letter-spacing: 0 !important; padding-left: 24px !important; }
+#w5 .lp7 .ex .sx-do .tip-in ul.arr{ margin: 0 0 1em; }
+#w5 .lp7 .ex .sx-do .tip-in ul.arr:last-child{ margin-bottom: 0; }
+#w5 .lp7 .ex .sx-do .tip-in ul.arr li::before{ font-weight: 400; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in p{ margin: 0 0 .4em !important; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in ul.arr.tight li{ margin: 0 !important; line-height: 1.3 !important; }
+#w5 .lp7 .ex .sx-do .tip-in ul.arr.tight{ margin: 0 0 .8em; }
+#w5 .lp7 .ex .sx-do .tip-in ul.arr.tight:last-child{ margin-bottom: 0; }
+#w5 .lp7 .ex .sx-do .ul{ text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li{ margin: 0 !important; }
+#w5 .lp7 .ex .sx-do ul.arr.defs{ margin: 0 0 .6em; }
+#w5 .lp7 .ex .sx-do ul.arr.defs li i{ font-style: italic; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in p:has(+ ul){ margin-bottom: 0 !important; }
+#w5 .lp7 .ex .sx-do .tip-in ul.arr.tight{ margin-top: 0; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li i{ font-weight: 700 !important; font-style: italic !important; }
+#w5 .lp7 .ex .sx-do .tip2{ display: grid; grid-template-columns: 1fr; row-gap: 16px; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tip-ex{ margin: 8px 0 0 !important; font-style: italic !important; }
+@media (min-width: 861px){#w5 .lp7 .ex .sx-do .tip-wide .tip-in{ box-sizing: border-box; width: calc(100vw - 450px); max-width: none; padding: 16px 18px; }
+#w5 .lp7 .ex .sx-do .tip2{ grid-template-columns: 50% 1fr; column-gap: 0; }
+#w5 .lp7 .ex .sx-do .tip2 > div:first-child{ padding-right: 24px; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t::after{ content: " IKEA"; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do ul.arr.defs li b.kw{ font-weight: 700 !important; font-style: normal !important; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in ul.chk li{ margin: 0 !important; line-height: 1.3 !important; }
+#w5 .lp7 .ex .sx-do .tip-in ul.chk{ margin: 0; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do p:has(+ ul.arr.defs){ margin-bottom: 0 !important; }
+#w5 .lp7 .ex .sx-do .tip-in ul.chk li::before{ border-width: 0 2px 2px 0; }
+#w5 .lp7 .ex > details.sx > summary h5::before{ content: "(W3)P2." counter(exn); }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do{ display: none !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary h5{ grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do p{ margin: 0 0 .6em !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child{ margin-bottom: 0 !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding: 40px 0 40px !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: block !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ margin-top: 18px !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-top: 28px !important; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 18px !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > small{ display: none !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 410px !important; }}
+:is(#w5) .lp7 .ex details.sx .tw tr + tr td{ border-top-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td,:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th{ border-bottom-color: #C8C8C8 !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 0 !important; }}
+:is(#w5) .lp7 .ex details.sx .tw table,:is(#w5) .lp7 .ex details.sx .tw td,:is(#w5) .lp7 .ex details.sx .tw th{ border-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td{ border-bottom: 0 !important; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do p{ font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *){ font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *){ font-weight: 400 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 12.5px !important; }
+:is(#w5) .lp7 .ex details.sx .sx-do .neg{ background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before{ font-size: 20px !important; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t::after{ content: " IKEA"; }
+#w5 .lp7 .ex > details.sx > summary h5::before{ content: "(W3)P\2006 2." counter(exn); }
+:is(#w5)#w2#w2 .lp7 .ex > details.sx:last-of-type,:is(#w5) .lp7 .ex > details.sx:last-of-type > summary{ border-bottom: 0 !important; }
+#w5#w5 .lp7 .ex > details.sx:last-of-type{ border-bottom: 0 !important; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do{ display: none !important; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do{ display: none !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary h5{ grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary h5{ grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do p{ margin: 0 0 .6em !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do p{ margin: 0 0 .6em !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child{ margin-bottom: 0 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child{ margin-bottom: 0 !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding: 40px 0 40px !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding: 40px 0 40px !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: block !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: block !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ margin-top: 18px !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ margin-top: 18px !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-top: 28px !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-top: 28px !important; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 18px !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 18px !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > small{ display: none !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > small{ display: none !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 410px !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 410px !important; }}
+:is(#w5) .lp7 .ex details.sx .tw tr + tr td{ border-top-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .tw tr + tr td{ border-top-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td,:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th{ border-bottom-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td,:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th{ border-bottom-color: #C8C8C8 !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 0 !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 0 !important; }}
+:is(#w5) .lp7 .ex details.sx .tw table,:is(#w5) .lp7 .ex details.sx .tw td,:is(#w5) .lp7 .ex details.sx .tw th{ border-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .tw table,:is(#w5) .lp7 .ex details.sx .tw td,:is(#w5) .lp7 .ex details.sx .tw th{ border-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td{ border-bottom: 0 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td{ border-bottom: 0 !important; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do p{ font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do p{ font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *){ font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *){ font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *){ font-weight: 400 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *){ font-weight: 400 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 12.5px !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 12.5px !important; }
+:is(#w5) .lp7 .ex details.sx .sx-do .neg{ background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#w5) .lp7 .ex details.sx .sx-do .neg{ background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before{ font-size: 20px !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before{ font-size: 20px !important; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t::after{ content: " IKEA"; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t::after{ content: " IKEA"; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do{ display: none !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary h5{ grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do p{ margin: 0 0 .6em !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child{ margin-bottom: 0 !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding: 40px 0 40px !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: block !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ margin-top: 18px !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-top: 28px !important; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 18px !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > small{ display: none !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 410px !important; }}
+:is(#w5) .lp7 .ex details.sx .tw tr + tr td{ border-top-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td,:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th{ border-bottom-color: #C8C8C8 !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 0 !important; }}
+:is(#w5) .lp7 .ex details.sx .tw table,:is(#w5) .lp7 .ex details.sx .tw td,:is(#w5) .lp7 .ex details.sx .tw th{ border-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td{ border-bottom: 0 !important; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do p{ font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *){ font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *){ font-weight: 400 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 12.5px !important; }
+:is(#w5) .lp7 .ex details.sx .sx-do .neg{ background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before{ font-size: 20px !important; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t::after{ content: " IKEA"; }
+:is(#w5)#w1#w1 .lp7 .ex > details.sx:last-of-type,:is(#w5) .lp7 .ex > details.sx:last-of-type > summary{ border-bottom: 0 !important; }
+#w5#w5 .lp7 .ex > details.sx:last-of-type{ border-bottom: 0 !important; }
+@media (max-width: 860px){html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary h5::before,html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary h5::before{ font-size: 26px !important; line-height: 1 !important; margin: 0 0 6px !important; }
+html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t,html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t{ font-size: 26px !important; line-height: 1.05 !important; }}
+@media (max-width: 860px){html body :is(#w5):is(#w5) .lp7 .ex > details.sx > summary .sx-k,html body :is(#w5):is(#w5) .lp7 .ex > details.sx > summary .sx-k{ display: none !important; }
+html body :is(#w5):is(#w5) .lp7 .ex > details.sx > summary,html body :is(#w5):is(#w5) .lp7 .ex > details.sx > summary{ grid-template-columns: max-content minmax(0, 1fr) !important; column-gap: 14px !important; }
+html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary,html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary{ grid-template-columns: minmax(0, 1fr) !important; }}
+@media (max-width: 860px), (hover: none){html body :is(#w5):is(#w5) .lp7 .ex .sx-t::before,html body :is(#w5):is(#w5) .lp7 .ex .sx-t::before{ display: none !important; }}
+#w5 .lp7 .ex .tw.fs td:nth-child(n+2),#w5 .lp7 .ex .tw.fs th:nth-child(n+2){ padding-right: 24px !important; }
+#w5#w5 .lp7 .ex .tw.fs .dv{ display: block; margin-top: 18px; font-family: var(--sans) !important; font-size: 13px !important; line-height: 1.35 !important; color: var(--muted); letter-spacing: 0 !important; }
+#w5#w5 .lp7 .ex .tw.fs .dv-l{ font-family: var(--sans) !important; font-size: 13px !important; font-weight: 700; color: var(--ink); margin-right: 4px; }
+@media (min-width: 861px){#w5 .lp7 .ex .tw.fs td{ height: 1px; }
+#w5 .lp7 .ex .tw.fs td .cl{ display: flex; flex-direction: column; height: 100%; }
+#w5#w5 .lp7 .ex .tw.fs .dv{ margin-top: auto; padding-top: 18px; }}
+#w5#w5 .lp7 .ex .sx-do .tip2.tip2g{ display: flex; flex-direction: column; row-gap: 0; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > .g-hf{ order: 1; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > .g-lf{ order: 2; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > .g-ef{ order: 3; margin-bottom: 16px !important; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > .g-hs{ order: 4; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > .g-ls{ order: 5; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > .g-es{ order: 6; }
+#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip2g > :is(.g-hf, .g-hs){ margin-bottom: 0 !important; }
+@media (min-width: 861px){#w5#w5 .lp7 .ex .sx-do .tip2.tip2g{ display: grid; grid-template-columns: 50% 1fr; column-gap: 0; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > *{ order: 0 !important; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > :is(.g-hf, .g-lf, .g-ef){ padding-right: 24px; }
+#w5#w5 .lp7 .ex .sx-do .tip2g > .g-ef{ margin-bottom: 0 !important; }}
+#w5#w5 .lp7 .ex .tw.fs .dv{ display: flex; flex-wrap: wrap; gap: 4px; color: var(--ink); }
+#w5#w5 .lp7 .ex .tw.fs .dv > span{ font-family: var(--sans) !important; font-size: 12px !important; line-height: 1.3 !important; background: var(--pill); padding: 2px 7px; }
+#w5#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in p.dati{ margin-top: 16px !important; }
+#w5#w5#w5 .lp7 .ex > details.sx > summary .sx-do ul.q5 li{ line-height: 1.25 !important; margin: 0 0 2px !important; }
+#w5#w5#w5 .lp7 .ex > details.sx > summary .sx-do p.dopo-tip{ margin-top: 22px !important; }
+#w5 .lp7 .ex .tw.qa td:first-child{ width: 32%; }
+#w5#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tip-coda{ margin-top: 10px !important; }
+#w5 .lp7 .ex .tw.qa table{ border-bottom: 0 !important; }
+#w5 .lp7 .ex .tw.qa tr:last-child td{ border-bottom: 0 !important; }
+#w5 .ref{ padding: 1px 6px; }
+#w5 .ref[data-tip]{ position: relative; }
+#w5 .ref[data-tip].tip-on:hover::after,#w5 .ref[data-tip].tip-on:focus-visible::after{ content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%); white-space: nowrap; background: var(--fg); color: var(--bg); font-family: var(--sans); font-size: 11px; font-weight: 600; line-height: 1.2; letter-spacing: 0; padding: 4px 8px; border-radius: 4px; z-index: 50; pointer-events: none; }
+@media (hover: none){#w5 .ref[data-tip]:hover::after{ content: none; }}
+#w5 .lp7 .ex .tw:has(.ref[data-tip]){ overflow: visible !important; }
+#w5#w5 .lp7 .mod-note{ line-height: 2.4 !important; }
+#w5#w5#w5 .lp7 .ex > details.sx > summary .sx-do .tip-in p.tl{ line-height: 1.32 !important; }
+#w5#w5 .lp7 .ex details.sx .sx-do .neg{ background: var(--ink); color: #fff; padding: 0 4px; }
+#w5#w5 .lp7 .ex details.sx .sx-do .tip2 li b{ font-weight: 700 !important; }
+@media (max-width: 860px){#w5 .lp7 .ex .tw.fs td:first-child{ font-family: var(--sans) !important; font-weight: 700; }
+#w5 .lp7 .ex .tw.fs td:nth-child(2)::before{ content: 'Forze'; display: block; font-family: var(--sans); font-weight: 700; margin-top: 6px; }
+#w5 .lp7 .ex .tw.fs td:nth-child(3)::before{ content: 'Segnali deboli'; display: block; font-family: var(--sans); font-weight: 700; margin-top: 6px; }}
+#w5 .lp7 .ex{ counter-reset: exn !important; }
+#w5 .lp7 #f6 .ex > details.sx > summary h5::before{ content: "(W5)P\2006 4." counter(exn) !important; }
+#w5 .lp7 #f4 .ex > details.sx > summary h5::before{ content: "(W4)P\2006 4." counter(exn) !important; }
+#w5 .lp7 #f5 .ex > details.sx > summary h5::before{ content: "(W4)P\2006 5." counter(exn) !important; }
+#w5 .fut-tens{ display: grid; grid-template-columns: minmax(0, 230px) minmax(0, 320px); gap: 10px; margin: 24px 0 28px; align-items: stretch; }
+#w5 .fut-tens .tens-box{ position: relative; padding: 24px; display: flex; flex-direction: column; gap: 10px; aspect-ratio: 1 / 1; box-sizing: border-box; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cpolyline points='0,1 3,5 6,1 9,5 12,1' fill='none' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") top left / 12px 6px repeat-x, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cpolyline points='0,1 3,5 6,1 9,5 12,1' fill='none' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") bottom left / 12px 6px repeat-x, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 12'%3E%3Cpolyline points='1,0 5,3 1,6 5,9 1,12' fill='none' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") top left / 6px 12px repeat-y, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 12'%3E%3Cpolyline points='1,0 5,3 1,6 5,9 1,12' fill='none' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") top right / 6px 12px repeat-y; }
+#w5#w5#w5 .fut-tens .tens-box small{ font-family: var(--sans) !important; font-size: 11px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: .04em; }
+#w5#w5#w5 .fut-tens .tens-box b{ font-family: var(--sans) !important; font-size: 24px !important; line-height: 1.1 !important; font-weight: 700 !important; letter-spacing: -.01em; }
+#w5#w5#w5 .fut-tens .tens-box span{ margin-top: auto; font-size: 15px !important; line-height: 1.3 !important; }
+#w5 .fonti-open{ margin-left: 6px; }
+#w5#w5#w5 .lp7 .ex details.sx .st-ex p.tens-lbl{ font-family: var(--sans) !important; font-size: 11px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: .04em !important; line-height: 1.2 !important; margin: 32px 0 8px !important; }
+#w5#w5#w5 .lp7 .ex details.sx .st-ex p.tens-txt{ margin-top: 0 !important; }
+#w5 .tens-2{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 32px; }
+#w5 .tens-2 > div{ padding-right: 24px; }
+#w5#w5#w5 .lp7 .ex details.sx .st-ex .tens-2 p.tens-lbl{ margin-top: 0 !important; }
+@media (max-width: 860px){#w5 .tens-2{ grid-template-columns: minmax(0, 1fr); row-gap: 20px; }}
+#w5#w5#w5 .lp7 .ex .st-ex > .fonti-det{ margin-top: 44px !important; }
+#w5#w5#w5 .lp7 .ex .fonti-det[open] > summary{ margin-bottom: 0 !important; }
+#w5#w5#w5 .lp7 .ex .fonti-in > p:first-child{ margin-top: 10px !important; }
+@media (max-width: 700px){#w5 .fut-tens{ grid-template-columns: minmax(0, 1fr); }
+#w5 .fut-tens .tens-box{ aspect-ratio: auto; }}
+#w5#w5#w5 .lp7 .ex .sx-do .tip2.tip2-1{ grid-template-columns: 1fr; }
+#w5#w5#w5 .lp7 .ex .sx-do .tip2.tip2-1 > div:first-child{ padding-right: 0; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do{ display: none !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: grid !important; grid-template-columns: 410px minmax(0, 1fr); column-gap: 0; align-items: start !important; padding: 28px 0 0 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary h5{ grid-column: 1; grid-row: 1; padding-right: 24px; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ display: block !important; grid-column: 2; grid-row: 1; max-width: 832px !important; margin: 0 !important; padding: 2px 0 0 !important; cursor: auto; -webkit-user-select: text; user-select: text; animation: sxdo .4s ease both; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do p{ margin: 0 0 .6em !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do > :last-child{ margin-bottom: 0 !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding: 40px 0 40px !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ display: block !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-do{ margin-top: 18px !important; }
+:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-top: 28px !important; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 18px !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > small{ display: none !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 410px !important; }}
+:is(#w5) .lp7 .ex details.sx .tw tr + tr td{ border-top-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) td,:is(#w5) .lp7 .ex details.sx .tw tr:not(:first-child):not(:last-child) th{ border-bottom-color: #C8C8C8 !important; }
+@media (min-width: 861px){:is(#w5) .lp7 .ex .sx-i > .dd-body{ padding-left: 0 !important; }}
+:is(#w5) .lp7 .ex details.sx .tw table,:is(#w5) .lp7 .ex details.sx .tw td,:is(#w5) .lp7 .ex details.sx .tw th{ border-color: #C8C8C8 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex > .tw:last-child tr:last-child td{ border-bottom: 0 !important; }
+:is(#w5) .lp7 .ex > details.sx > summary .sx-do p{ font-family: var(--sans) !important; font-size: clamp(15px, 1.2vw, 17px) !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -.01em !important; color: var(--ink); }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li, h6, span, b, strong, em, .lbl):not(.tw *){ font-family: var(--slab) !important; font-size: 16px !important; line-height: 1.35 !important; letter-spacing: 0 !important; }
+:is(#w5) .lp7 .ex details.sx .st-ex :is(p, li):not(.tw *){ font-weight: 400 !important; }
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary{ padding-top: 12.5px !important; }
+:is(#w5) .lp7 .ex details.sx .sx-do .neg{ background: var(--ink); color: #fff; padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 150px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 150px 260px minmax(0, 1fr) !important; }
+@media (max-width: 860px){:is(#w5) .lp7 .ex > details.sx > summary h5{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary{ grid-template-columns: 104px minmax(0, 1fr) !important; }
+:is(#w5) .lp7 .ex > details.sx:not(.sx-open) > summary h5::before{ font-size: 20px !important; }}
+:is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t::after{ content: " IKEA"; }
+@media (max-width: 860px){html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary h5::before,html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary h5::before{ font-size: 26px !important; line-height: 1 !important; margin: 0 0 6px !important; }
+html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t,html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary .sx-t{ font-size: 26px !important; line-height: 1.05 !important; }}
+@media (max-width: 860px){html body :is(#w5):is(#w5) .lp7 .ex > details.sx > summary .sx-k,html body :is(#w5):is(#w5) .lp7 .ex > details.sx > summary .sx-k{ display: none !important; }
+html body :is(#w5):is(#w5) .lp7 .ex > details.sx > summary,html body :is(#w5):is(#w5) .lp7 .ex > details.sx > summary{ grid-template-columns: max-content minmax(0, 1fr) !important; column-gap: 14px !important; }
+html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary,html body :is(#w5):is(#w5) .lp7 .ex > details.sx.sx-open > summary{ grid-template-columns: minmax(0, 1fr) !important; }}
+@media (max-width: 860px), (hover: none){html body :is(#w5):is(#w5) .lp7 .ex .sx-t::before,html body :is(#w5):is(#w5) .lp7 .ex .sx-t::before{ display: none !important; }}
+#w5 .lp7 .ex { counter-reset: exn !important; }
+#w5 .lp7 #f6 .ex > details.sx > summary h5::before { content: "(W5)P\2006 4." counter(exn) !important; }
+
+/* v49: navbar sopra le lezioni */
+.navbar { z-index: 8; }
+
+/* v49-80: E5, numerazione dei passi ed elenco delle fonti */
+#e5 .lp7 .ex > details.sx > summary h5::before { content: "(W5)E5." counter(exn) !important; }
+#e5 .ex-src{ margin: 40px 0 0; max-width: 832px; }
+#e5 .ex-src small{ display: block; margin: 0 0 10px; font-family: var(--sans); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+#e5 .ex-src ul{ list-style: none; margin: 0; padding: 0; }
+#e5 .ex-src li{ font-family: var(--sans); font-size: 14px; line-height: 1.5; }
+#e5 .ex-src a{ color: inherit; text-decoration: underline; text-underline-offset: .2em; }
